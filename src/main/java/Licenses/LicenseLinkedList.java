@@ -2,6 +2,7 @@ package Licenses;
 
 import Interfaces.IPrintInfo;
 
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public class LicenseLinkedList<T> implements IPrintInfo {
@@ -12,11 +13,12 @@ public class LicenseLinkedList<T> implements IPrintInfo {
         private T value;
         private Node next;
 
-        private Node(T value) {
+        public Node(T value) {
             this.value = value;
             this.next = null;
         }
     }
+
 
     public void add(T element) {
         Node node = new Node(element);

@@ -7,6 +7,7 @@ import Exceptions.*;
 import Clients.Client;
 import Licenses.*;
 import Cars.*;
+
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -50,7 +51,6 @@ public class Main {
         printInfo(bossTruck);
         work(bossTruck);
         bossTruck.countSalary();
-        log.info(cSTrucks.equals(managerTruck.getName(), mechanicTruck.getName()));
         Car truckcar1 = new Car("Volvo", "VNL300");
         Car truckcar2 = new Car("Volvo", "VNL400");
         log.info("Cars:");
@@ -165,12 +165,12 @@ public class Main {
         licensePlateString.add("hhjghj");
         licensePlateString.printInfo();
 
-
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
         licensePlateInteger.add(123456);
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.printInfo();
+
     }
 
     public static void printDiscount(ICarService iCarService) {

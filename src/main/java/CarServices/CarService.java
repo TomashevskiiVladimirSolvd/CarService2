@@ -81,11 +81,11 @@ public abstract class CarService implements ICarService {
 
 
     public int hashCode() {
-        return Objects.hash(name, address, phoneNumber);
+        return Objects.hash(employees,cars,clients);
     }
 
-    public String equals(String str1, String str2) {
-        return "Equals" + str1.equals(str2);
+    public String equals(ArrayList<Employee> employees, ArrayList<Client> clients) {
+        return "Equals" + employees.equals(clients);
     }
 
 
