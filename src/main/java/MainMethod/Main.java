@@ -32,7 +32,7 @@ public class Main {
 
         File text = new File("src/main/resources/text.txt");
         String content = FileUtils.readFileToString(text, StandardCharsets.UTF_8.name());
-        String[] arr = content.split("\\W+");
+        String[] arr = content.split("[^a-zA-Z]+");
         ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
         Set<String> set = new HashSet<>(arl);
         FileUtils.writeStringToFile(text, content + " " + set.size());
