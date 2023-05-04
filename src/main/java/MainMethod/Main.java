@@ -7,18 +7,38 @@ import Exceptions.*;
 import Clients.Client;
 import Licenses.*;
 import Cars.*;
+import org.apache.commons.io.FileUtils;
 
+
+import java.io.File;
 import java.io.IOException;
+
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class Main {
+
 
     public static void main(String[] args) throws Exception {
         Logger log = Logger.getLogger(Main.class.getName());
         FileHandler fh;
         fh = new FileHandler("/Users/virasamarska/Desktop/MainMethod.Main.log");
         log.addHandler(fh);
+
+        File text = new File("src/main/resources/text.txt");
+        String content = FileUtils.readFileToString(text, StandardCharsets.UTF_8.name());
+        String[] arr = content.split("\\W+");
+        ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
+        System.out.println(arl.toString());
+        Set<String> set = new HashSet<>(arl);
+        FileUtils.writeStringToFile(text, content + " " + set.size());
+
+
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
@@ -170,6 +190,7 @@ public class Main {
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.printInfo();
+
 
     }
 

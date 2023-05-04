@@ -2,6 +2,7 @@ package Licenses;
 
 import Interfaces.IPrintInfo;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.logging.Logger;
 
@@ -32,6 +33,7 @@ public class LicenseLinkedList<T> implements IPrintInfo {
             iterator.next = node;
         }
     }
+
 
     @Override
     public void printInfo() {

@@ -81,7 +81,7 @@ public abstract class CarService implements ICarService {
 
 
     public int hashCode() {
-        return Objects.hash(employees,cars,clients);
+        return Objects.hash(employees, cars, clients);
     }
 
     public String equals(ArrayList<Employee> employees, ArrayList<Client> clients) {

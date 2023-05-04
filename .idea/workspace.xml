@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarServices/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarServices/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Employees/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Employees/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Employees/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Employees/Mechanic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" afterDir="false" />
     </list>
