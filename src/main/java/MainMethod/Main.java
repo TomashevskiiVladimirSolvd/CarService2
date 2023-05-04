@@ -34,7 +34,6 @@ public class Main {
         String content = FileUtils.readFileToString(text, StandardCharsets.UTF_8.name());
         String[] arr = content.split("\\W+");
         ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
-        System.out.println(arl.toString());
         Set<String> set = new HashSet<>(arl);
         FileUtils.writeStringToFile(text, content + " " + set.size());
 
