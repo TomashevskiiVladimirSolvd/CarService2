@@ -13,7 +13,9 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -31,12 +33,12 @@ public class Main {
         log.addHandler(fh);
 
         File text = new File("src/main/resources/text.txt");
+        File countUniqueWords = new File("src/main/resources/countUniqueWords.txt");
         String content = FileUtils.readFileToString(text, StandardCharsets.UTF_8.name());
         String[] arr = content.split("[^a-zA-Z]+");
         ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
         Set<String> set = new HashSet<>(arl);
-        FileUtils.writeStringToFile(text, content + " " + set.size());
-
+        FileUtils.writeStringToFile(countUniqueWords, "" + set.size());
 
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
