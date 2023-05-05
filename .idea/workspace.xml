@@ -5,10 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="text read and write number">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Licenses/LicenseLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarServices/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarServices/CarServiceTrailers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrailers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarServices/CarServiceTrucks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrucks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarServices/CarServiceUsualCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceUsualCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cars/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employees/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employees/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employees/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employees/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Exceptions/BusinessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/ClaimException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Exceptions/ClaimException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/GetDirtyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Exceptions/GetDirtyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/LawException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Exceptions/LawException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/ToolException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Exceptions/ToolException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/ICarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Interfaces/ICarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/ICarTuning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Interfaces/ICarTuning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/IDesignChanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Interfaces/IDesignChanges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/IPrintInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Interfaces/IPrintInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/IWeighting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Interfaces/IWeighting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/IWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Interfaces/IWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/countUniqueWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/countUniqueWords.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +48,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,12 +99,20 @@
       <option name="project" value="LOCAL" />
       <updated>1683246100587</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="text read and write number">
+      <created>1683254394273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683254394273</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="addFileUtils" />
     <MESSAGE value="text" />
+    <MESSAGE value="new" />
     <MESSAGE value="text read and write number" />
     <option name="LAST_COMMIT_MESSAGE" value="text read and write number" />
   </component>
