@@ -29,7 +29,6 @@ import static org.apache.commons.io.FileUtils.writeStringToFile;
 
 public class Main {
 
-
     public static void main(String[] args) throws Exception {
         Logger log = Logger.getLogger(Main.class.getName());
         FileHandler fh;
@@ -199,7 +198,6 @@ public class Main {
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
-
 
 
     }

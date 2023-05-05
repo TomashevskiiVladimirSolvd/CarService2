@@ -5,7 +5,7 @@ import com.solvd.laba.Interfaces.IPrintInfo;
 import java.util.*;
 
 
-public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
+public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     private Node head;
     private int size;
 
@@ -33,8 +33,8 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
     public boolean contains(Object obj) {
         Node curr = head;
 
-        while(curr.next != null) {
-            if(curr.data.equals(obj))
+        while (curr.next != null) {
+            if (curr.data.equals(obj))
                 return true;
         }
 
@@ -51,7 +51,7 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         Object[] arr = new Object[size];
         Node curr = head;
 
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             arr[i] = curr.data;
             curr = curr.next;
         }
@@ -70,8 +70,7 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
 
         if (head == null) {
             head = newNode;
-        }
-        else {
+        } else {
             Node curr = head;
             while (curr.next != null)
                 curr = curr.next;
@@ -88,13 +87,13 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         Node curr = head;
         boolean removed = false;
 
-        if(head.equals(obj)) {
+        if (head.equals(obj)) {
             head = head.next;
             removed = true;
         }
 
-        while(!removed && curr.next != null) {
-            if(curr.equals(obj)) {
+        while (!removed && curr.next != null) {
+            if (curr.equals(obj)) {
                 curr = curr.next;
                 prev.next = curr;
                 removed = true;
@@ -103,12 +102,12 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
             curr = curr.next;
         }
 
-        if(!removed && curr.equals(obj)) {
+        if (!removed && curr.equals(obj)) {
             prev.next = null;
             removed = true;
         }
 
-        if(removed)
+        if (removed)
             size--;
 
         return removed;
@@ -118,7 +117,7 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
     public boolean containsAll(Collection<?> c) {
         Node curr = head;
 
-        while(curr != null) {
+        while (curr != null) {
             if (!contains(curr))
                 return false;
             curr = curr.next;
@@ -138,8 +137,8 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        for(Object obj : c)
-            if(contains(obj))
+        for (Object obj : c)
+            if (contains(obj))
                 return remove(obj);
         return false;
     }
@@ -159,10 +158,10 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
     public T get(int index) {
         Node curr = head;
 
-        if(index < 0 || index > size)
+        if (index < 0 || index > size)
             return null;
 
-        while(index-- != 0)
+        while (index-- != 0)
             curr = curr.next;
         return curr.data;
     }
@@ -171,7 +170,7 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
     public T set(int index, T element) {
         Node curr = head;
 
-        if(index < 0 || index > size)
+        if (index < 0 || index > size)
             return null;
 
         while (index-- != 0)
@@ -190,10 +189,10 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         Node curr = head;
         Node newNode = new Node(element);
 
-        if(index < 0 || index > size)
+        if (index < 0 || index > size)
             System.out.println("Invalid index.");
         else {
-            while(index-- != 0) {
+            while (index-- != 0) {
                 prev = curr;
                 curr = curr.next;
             }
@@ -209,10 +208,10 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         Node prev = head;
         Node curr = head;
 
-        if(index < 0 || index > size)
+        if (index < 0 || index > size)
             return null;
 
-        while(index-- != 0) {
+        while (index-- != 0) {
             prev = curr;
             curr = curr.next;
         }
@@ -230,8 +229,8 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         int index = 0;
         Node curr = head;
 
-        while(curr != null) {
-            if(curr.data.equals(obj))
+        while (curr != null) {
+            if (curr.data.equals(obj))
                 return index;
             index++;
             curr = curr.next;
@@ -246,8 +245,8 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         int lastIndex = -1;
         Node curr = head;
 
-        while(curr != null) {
-            if(curr.data.equals(obj))
+        while (curr != null) {
+            if (curr.data.equals(obj))
                 lastIndex = index;
             index++;
             curr = curr.next;
@@ -276,10 +275,10 @@ public class LicenseLinkedList<T> implements List<T> , IPrintInfo {
         Node curr = head;
         int i = 0;
 
-        if(curr == null)
+        if (curr == null)
             System.out.println("EMPTY LIST");
 
-        while(curr != null) {
+        while (curr != null) {
             System.out.println("[" + ++i + "] " + curr.data);
             curr = curr.next;
         }

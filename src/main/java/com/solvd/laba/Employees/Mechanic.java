@@ -54,7 +54,7 @@ public class Mechanic extends Employee {
         if (toolsNumber > 0) {
             log.info("You have a tool.You can work.");
         } else {
-                throw new ToolException("You don't have tools .It is really bad");
+            throw new ToolException("You don't have tools .It is really bad");
 
         }
     }
