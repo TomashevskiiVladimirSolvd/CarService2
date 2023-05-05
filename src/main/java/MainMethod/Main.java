@@ -9,19 +9,17 @@ import Licenses.*;
 import Cars.*;
 import org.apache.commons.io.FileUtils;
 
-
 import java.io.File;
 import java.io.IOException;
-
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
+
+import static org.apache.commons.io.FileUtils.writeStringToFile;
 
 public class Main {
 
@@ -38,7 +36,7 @@ public class Main {
         String[] arr = content.split("[^a-zA-Z]+");
         ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
         Set<String> set = new HashSet<>(arl);
-        FileUtils.writeStringToFile(countUniqueWords, "" + set.size());
+        writeStringToFile(countUniqueWords, "The number of unique words is:" + set.size());
 
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
@@ -181,15 +179,22 @@ public class Main {
 
         log.info("Available lisence plates:");
         LicenseLinkedList<String> licensePlateString = new LicenseLinkedList<>();
-        licensePlateString.add("hhfghj");
-        licensePlateString.add("hffyhj");
-        licensePlateString.add("hhjghj");
+        licensePlateString.addAtEnd("hhfghj");
+        licensePlateString.addAtEnd("hffyhj");
+        licensePlateString.addAtEnd("tyufyhj");
+        licensePlateString.addAtStart("hhjghj");
+        licensePlateString.remove(2);
         licensePlateString.printInfo();
+        System.out.println(licensePlateString.getSize());
+        System.out.println(licensePlateString.get(1));
 
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
-        licensePlateInteger.add(123456);
-        licensePlateInteger.add(857576);
-        licensePlateInteger.add(284045);
+        licensePlateInteger.addAtEnd(123456);
+        licensePlateInteger.addAtEnd(857576);
+        licensePlateInteger.addAtStart(284045);
+        licensePlateInteger.addAtStart(285445);
+        licensePlateInteger.removeFromStart();
+        licensePlateInteger.removefromEnd();
         licensePlateInteger.printInfo();
 
 

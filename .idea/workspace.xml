@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="text">
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="text read and write number">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Licenses/LicenseLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMethod/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/text.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +60,27 @@
       <option name="project" value="LOCAL" />
       <updated>1683244367161</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="text read and write number">
+      <created>1683246084913</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683246084914</updated>
+    </task>
+    <task id="LOCAL-00005" summary="text read and write number">
+      <created>1683246100587</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683246100587</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="addFileUtils" />
     <MESSAGE value="text" />
-    <option name="LAST_COMMIT_MESSAGE" value="text" />
+    <MESSAGE value="text read and write number" />
+    <option name="LAST_COMMIT_MESSAGE" value="text read and write number" />
   </component>
 </project>
