@@ -49,10 +49,11 @@ public class Mechanic extends Employee {
     }
 
 
-    public void useTools() {
+    public void fillFormOfBrokenTool() {
 
         if (toolsNumber > 0) {
             log.info("You have a tool.You can work.");
+            toolsNumber--;
         } else {
             throw new ToolException("You don't have tools .It is really bad");
 
@@ -61,9 +62,10 @@ public class Mechanic extends Employee {
 
     public void useTheGloves() {
         if (glovesNumber > 0) {
-            log.info("Employees.Mechanic uses his gloves.");
+            log.info("Mechanic uses his gloves.");
+            glovesNumber--;
         } else {
-            throw new GetDirtyException("Employees.Mechanic doesn't have gloves .His hands are dirty now.");
+            throw new GetDirtyException("Mechanic doesn't have gloves .His hands are dirty now.");
         }
     }
 

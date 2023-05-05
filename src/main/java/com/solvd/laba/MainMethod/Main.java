@@ -51,7 +51,7 @@ public class Main {
         clientTruck.printInfo();
         clientTruck.leaveGoodFeedback();
         Manager managerTruck = new Manager("Bill Dylan", "Employees.Manager", "678 Bud street", 1, 0);
-        Mechanic mechanicTruck = new Mechanic("Bob Bronson", "Employees.Mechanic", "55 Found ave", 33, 0);
+        Mechanic mechanicTruck = new Mechanic("Bob Bronson", "Employees.Mechanic", "55 Found ave", 33, 1);
         Boss bossTruck = new Boss("Phill Dumphy", "Employees.Boss", "77 Grass ave", 3);
         log.info("Employees:");
         printInfo(managerTruck);
@@ -59,18 +59,19 @@ public class Main {
         managerTruck.talkToInsurance();
         try {
             managerTruck.toWorkWithClients();
-        } catch (ClaimException c) {
+        } catch (ClaimException e) {
             log.info("Employees.Manager was rude with a client.Now the client filed a complain");
-            c.printStackTrace();
+            e.printStackTrace();
         }
         printInfo(mechanicTruck);
         work(mechanicTruck);
         mechanicTruck.checkUpCar();
+        mechanicTruck.useTheGloves();
         try {
             mechanicTruck.useTheGloves();
-        } catch (GetDirtyException g) {
+        } catch (GetDirtyException e) {
             log.info("Employees.Mechanic doesn't have gloves .His hands are dirty now.");
-            g.printStackTrace();
+            e.printStackTrace();
         }
         printInfo(bossTruck);
         work(bossTruck);
@@ -91,7 +92,7 @@ public class Main {
         CarServiceUsualCars cSUsual = new CarServiceUsualCars("CarRepair", "12 Hamilton street", 857563532, false);
         printInfo(cSUsual);
         Manager usualManager = new Manager("Billy Crystal", "Employees.Manager", "365 Gum street", 11, 0);
-        Mechanic usualMechanic = new Mechanic("Buddy Hamilton", "Employees.Mechanic", "99 Round ave", 0, 1);
+        Mechanic usualMechanic = new Mechanic("Buddy Hamilton", "Employees.Mechanic", "99 Round ave", 1, 1);
         Boss usualBoss = new Boss("Matt Logan", "Employees.Boss", "432 Pan street", 2);
         log.info("Employees:");
         printInfo(usualManager);
@@ -99,33 +100,34 @@ public class Main {
         usualManager.talkToInsurance();
         try {
             usualManager.createCarInsurance();
-        } catch (LawException l) {
+        } catch (LawException e) {
             log.info("Fake car Insurance is illegal,You'll be in jail");
-            l.printStackTrace();
+            e.printStackTrace();
         }
         printInfo(usualMechanic);
         work(usualMechanic);
         usualMechanic.checkUpCar();
+        usualMechanic.fillFormOfBrokenTool();
         try {
-            usualMechanic.useTools();
-        } catch (ToolException t) {
+            usualMechanic.fillFormOfBrokenTool();
+        } catch (ToolException e) {
             log.info("You don't have tools .It is really bad");
-            t.printStackTrace();
+            e.printStackTrace();
         }
         printInfo(usualBoss);
         work(usualBoss);
         usualBoss.countSalary();
         try {
             usualBoss.controlBusiness();
-        } catch (BusinessException b) {
+        } catch (BusinessException e) {
             log.info("You don't control your business.It is bad for your income.");
-            b.printStackTrace();
+            e.printStackTrace();
         }
         try {
             usualBoss.readDocumentFirstLine("");
-        } catch (IOException i) {
+        } catch (IOException e) {
             log.info("No such file or directory");
-            i.printStackTrace();
+            e.printStackTrace();
         }
 
         Car usualcar1 = new Car("Toyota", "Corolla");
@@ -198,6 +200,15 @@ public class Main {
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
+        licensePlateInteger.printInfo();
+
+        LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
+        licensePlateInteger2.add(586768);
+        try {
+            licensePlateInteger2.addAll(licensePlateInteger);
+        } catch (UnsupportedOperationException e) {
+            licensePlateInteger2.printInfo();
+        }
 
 
     }

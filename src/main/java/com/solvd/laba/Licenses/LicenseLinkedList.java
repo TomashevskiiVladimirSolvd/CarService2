@@ -42,29 +42,6 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     }
 
     @Override
-    public Iterator<T> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        Object[] arr = new Object[size];
-        Node curr = head;
-
-        for (int i = 0; i < size; i++) {
-            arr[i] = curr.data;
-            curr = curr.next;
-        }
-
-        return arr;
-    }
-
-    @Override
-    public <T1> T1[] toArray(T1[] a) {
-        return null;
-    }
-
-    @Override
     public boolean add(T obj) {
         Node newNode = new Node(obj);
 
@@ -126,25 +103,25 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     }
 
     @Override
-    public boolean addAll(Collection<? extends T> c) {
-        return false;
+    public boolean addAll(int index, Collection<? extends T> c) {
+        throw new UnsupportedOperationException("don't use it here");
     }
 
     @Override
-    public boolean addAll(int index, Collection<? extends T> c) {
-        return false;
+    public boolean addAll(Collection<? extends T> c) {
+        boolean modified = false;
+        for (Object e : c)
+            if (add((T) e))
+                modified = true;
+        return modified;
     }
+
 
     @Override
     public boolean removeAll(Collection<?> c) {
         for (Object obj : c)
             if (contains(obj))
                 return remove(obj);
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
         return false;
     }
 
@@ -256,21 +233,6 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     }
 
     @Override
-    public ListIterator<T> listIterator() {
-        return null;
-    }
-
-    @Override
-    public ListIterator<T> listIterator(int index) {
-        return null;
-    }
-
-    @Override
-    public List<T> subList(int fromIndex, int toIndex) {
-        return null;
-    }
-
-    @Override
     public void printInfo() {
         Node curr = head;
         int i = 0;
@@ -303,5 +265,48 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     @Override
     public int hashCode() {
         return Objects.hash(head, size);
+    }
+
+    @Override
+    public Object[] toArray() {
+        Object[] arr = new Object[size];
+        Node curr = head;
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = curr.data;
+            curr = curr.next;
+        }
+
+        return arr;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        throw new UnsupportedOperationException("don't use it here");
+    }
+
+    @Override
+    public <T1> T1[] toArray(T1[] a) {
+        throw new UnsupportedOperationException("don't use it here");
+    }
+
+    @Override
+    public ListIterator<T> listIterator() {
+        throw new UnsupportedOperationException("don't use it here");
+    }
+
+    @Override
+    public ListIterator<T> listIterator(int index) {
+        throw new UnsupportedOperationException("don't use it here");
+    }
+
+    @Override
+    public List<T> subList(int fromIndex, int toIndex) {
+        throw new UnsupportedOperationException("don't use it here");
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        throw new UnsupportedOperationException("don't use it here");
     }
 }
