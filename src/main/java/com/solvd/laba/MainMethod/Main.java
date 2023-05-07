@@ -218,11 +218,11 @@ public class Main {
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
         licensePlateInteger2.add(586768);
         licensePlateInteger2.add(586760);
-        try {
-            licensePlateInteger2.addAll(licensePlateInteger);
-        } catch (UnsupportedOperationException e) {
-            licensePlateInteger.printInfo();
-        }
+
+        LicenseLinkedList<Integer> allIntegerLicensePlate = new LicenseLinkedList<>();
+        allIntegerLicensePlate.addAll(licensePlateInteger);
+        allIntegerLicensePlate.addAll(licensePlateInteger2);
+        System.out.println(allIntegerLicensePlate);
 
     }
 
