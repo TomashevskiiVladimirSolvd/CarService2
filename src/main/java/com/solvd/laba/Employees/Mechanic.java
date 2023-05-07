@@ -41,11 +41,11 @@ public class Mechanic extends Employee {
 
     @Override
     public void work() {
-        log.info("I am Employees.Mechanic.I fix this car.");
+        log.info("I am Mechanic.I fix this car.");
     }
 
     public void checkUpCar() {
-        log.info("As  a mechanic i check car first.");
+        log.info("As  a Mechanic i check car first.");
     }
 
 

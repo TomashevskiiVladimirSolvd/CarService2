@@ -24,7 +24,7 @@ public class Boss extends Employee {
     }
 
     public void countSalary() {
-        log.info("As  a boss i count Salary for each employee");
+        log.info("As  a Boss i count Salary for each employee");
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Boss extends Employee {
 
     @Override
     public void work() {
-        log.info("I am Employees.Boss.I control everything.");
+        log.info("I am Boss.I control everything.");
     }
 
 

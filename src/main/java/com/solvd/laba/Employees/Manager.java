@@ -30,16 +30,16 @@ public class Manager extends Employee {
     }
 
     public void talkToInsurance() {
-        log.info("As  a manager i talk to insurance");
+        log.info("As a Manager i talk to insurance");
     }
 
     public void countSalary() {
-        log.info("As  a boss i count Salary for each employee");
+        log.info("As a Boss i count Salary for each employee");
     }
 
     @Override
     public void work() {
-        log.info("I am Employees.Manager.I work with the clients");
+        log.info("I am Manager.I work with the clients");
     }
 
     @Override
@@ -54,16 +54,16 @@ public class Manager extends Employee {
             throw new LawException("Fake car Insurance is illegal");
 
         } else {
-            log.info("Employees.Manager creates good insurance");
+            log.info("Manager creates good insurance");
         }
     }
 
 
     public void toWorkWithClients() throws ClaimException {
         if (claimNumber == 0) {
-            log.info("Employees.Manager works with clients very well.");
+            log.info("Manager works with clients very well.");
         } else if (claimNumber > 0) {
-            throw new ClaimException("Employees.Manager was rude with a client.Now the client filed a complain");
+            throw new ClaimException("Manager was rude with a client.Now the client filed a complain");
         }
     }
 }
