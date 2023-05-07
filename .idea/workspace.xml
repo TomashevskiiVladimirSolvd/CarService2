@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="last">
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Licenses/LicenseLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Licenses/LicenseLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Main.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Main.log" afterDir="false" />
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683314552463</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1683328643351</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683328643351</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,6 +121,14 @@
     <MESSAGE value="new" />
     <MESSAGE value="text read and write number" />
     <MESSAGE value="last" />
-    <option name="LAST_COMMIT_MESSAGE" value="last" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="content=&quot;Hey buddy&quot;" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

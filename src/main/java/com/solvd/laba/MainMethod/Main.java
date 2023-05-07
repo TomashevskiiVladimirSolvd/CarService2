@@ -186,28 +186,34 @@ public class Main {
 
         log.info("Available lisence plates:");
         LicenseLinkedList<String> licensePlateString = new LicenseLinkedList<>();
-        licensePlateString.add("hhfghj");
-        licensePlateString.add("hffyhj");
-        licensePlateString.add("tyufyhj");
-        licensePlateString.add("hhjghj");
+        licensePlateString.add("plate");
+        licensePlateString.add("pplate");
+        licensePlateString.add("pllate");
+        licensePlateString.add("plaate");
         licensePlateString.remove(2);
         licensePlateString.printInfo();
         System.out.println(licensePlateString.size());
         System.out.println(licensePlateString.get(1));
 
+
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
         licensePlateInteger.add(123456);
+        licensePlateInteger.clear();
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
         licensePlateInteger.printInfo();
+        System.out.println("Is this empty list: " + licensePlateInteger.isEmpty());
+        System.out.println(licensePlateInteger.contains(857576));
+
 
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
         licensePlateInteger2.add(586768);
+        licensePlateInteger2.add(586760);
         try {
             licensePlateInteger2.addAll(licensePlateInteger);
         } catch (UnsupportedOperationException e) {
-            licensePlateInteger2.printInfo();
+            licensePlateInteger.printInfo();
         }
 
 

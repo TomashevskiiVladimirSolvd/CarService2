@@ -102,6 +102,7 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
         return true;
     }
 
+
     @Override
     public boolean addAll(int index, Collection<? extends T> c) {
         throw new UnsupportedOperationException("don't use it here");
