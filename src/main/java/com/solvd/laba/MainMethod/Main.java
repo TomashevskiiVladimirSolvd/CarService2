@@ -1,5 +1,6 @@
 package com.solvd.laba.MainMethod;
 
+import com.solvd.laba.CarServices.CarService;
 import com.solvd.laba.Exceptions.*;
 import com.solvd.laba.Cars.Car;
 import com.solvd.laba.CarServices.CarServiceTrailers;
@@ -42,6 +43,9 @@ public class Main {
         ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
         Set<String> set = new HashSet<>(arl);
         writeStringToFile(countUniqueWords, "The number of unique words is:" + set.size());
+
+        double oil95Rate = CarService.OIL_95_RATE;
+        log.info("The rate of Oil 95 is: " + oil95Rate);
 
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
@@ -215,7 +219,6 @@ public class Main {
         } catch (UnsupportedOperationException e) {
             licensePlateInteger.printInfo();
         }
-
 
     }
 

@@ -1,19 +1,18 @@
 package com.solvd.laba.CarServices;
 
-import com.solvd.laba.Employees.*;
 import com.solvd.laba.Cars.Car;
 import com.solvd.laba.Interfaces.ICarService;
-import com.solvd.laba.Cars.*;
-import com.solvd.laba.Clients.*;
 import com.solvd.laba.Clients.Client;
 import com.solvd.laba.Employees.Employee;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Logger;
 
 public abstract class CarService implements ICarService {
+    public static double OIL_95_RATE;
     Logger log = Logger.getLogger(CarService.class.getName());
     private String name;
     private String address;
@@ -30,7 +29,7 @@ public abstract class CarService implements ICarService {
     }
 
     static {
-        System.out.println("CarService Class Is Loaded");
+        OIL_95_RATE = 3.65;
     }
 
     public List<Car> getCars() {

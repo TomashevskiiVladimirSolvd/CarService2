@@ -20,41 +20,119 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     }
 
     @Override
-    public int size() {
-        return size;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return head == null;
-    }
-
-    @Override
-    public boolean contains(Object obj) {
+    public T remove(int index) {
+        Node prev = head;
         Node curr = head;
 
-        while (curr.next != null) {
-            if (curr.data.equals(obj))
-                return true;
+        if (index < 0 || index > size)
+            return null;
+
+        while (index-- != 0) {
+            prev = curr;
+            curr = curr.next;
         }
 
+        T temp = curr.data;
+        curr = curr.next;
+        prev.next = curr;
+        size--;
+
+        return temp;
+    }
+
+    @Override
+    public void add(int index, T element) {
+        Node prev = head;
+        Node curr = head;
+        Node newNode = new Node(element);
+
+        if (index < 0 || index > size)
+            System.out.println("Invalid index.");
+        else {
+            while (index-- != 0) {
+                prev = curr;
+                curr = curr.next;
+            }
+
+            prev.next = newNode;
+            newNode.next = curr;
+        }
+        size++;
+    }
+
+    @Override
+    public T set(int index, T element) {
+        Node curr = head;
+
+        if (index < 0 || index > size)
+            return null;
+
+        while (index-- != 0)
+            curr = curr.next;
+
+        T temp = curr.data;
+        curr.data = element;
+        size++;
+
+        return temp;
+    }
+
+    @Override
+    public T get(int index) {
+        Node curr = head;
+
+        if (index < 0 || index > size)
+            return null;
+
+        while (index-- != 0)
+            curr = curr.next;
+        return curr.data;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(head, size);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LicenseLinkedList<?> that = (LicenseLinkedList<?>) o;
+        return size == that.size && Objects.equals(head, that.head);
+    }
+
+    @Override
+    public void clear() {
+        size = 0;
+        head = null;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        for (Object obj : c)
+            if (contains(obj))
+                return remove(obj);
         return false;
     }
 
     @Override
-    public boolean add(T obj) {
-        Node newNode = new Node(obj);
-
-        if (head == null) {
-            head = newNode;
-        } else {
-            Node curr = head;
-            while (curr.next != null)
-                curr = curr.next;
-            curr.next = newNode;
+    public boolean addAll(Collection<? extends T> c) {
+        for (T element : c) {
+            add(element);
         }
-        size++;
+        return true;
+    }
 
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        Node curr = head;
+
+        while (curr != null) {
+            if (!contains(curr))
+                return false;
+            curr = curr.next;
+        }
         return true;
     }
 
@@ -91,146 +169,42 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     }
 
     @Override
-    public boolean containsAll(Collection<?> c) {
-        Node curr = head;
+    public boolean add(T obj) {
+        Node newNode = new Node(obj);
 
-        while (curr != null) {
-            if (!contains(curr))
-                return false;
-            curr = curr.next;
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node curr = head;
+            while (curr.next != null)
+                curr = curr.next;
+            curr.next = newNode;
         }
+        size++;
+
         return true;
     }
 
-
     @Override
-    public boolean addAll(int index, Collection<? extends T> c) {
-        throw new UnsupportedOperationException("don't use it here");
-    }
+    public boolean contains(Object obj) {
+        Node curr = head;
 
-    @Override
-    public boolean addAll(Collection<? extends T> c) {
-        boolean modified = false;
-        for (Object e : c)
-            if (add((T) e))
-                modified = true;
-        return modified;
-    }
+        while (curr.next != null) {
+            if (curr.data.equals(obj))
+                return true;
+        }
 
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        for (Object obj : c)
-            if (contains(obj))
-                return remove(obj);
         return false;
     }
 
     @Override
-    public void clear() {
-        size = 0;
-        head = null;
+    public boolean isEmpty() {
+        return head == null;
     }
 
     @Override
-    public T get(int index) {
-        Node curr = head;
-
-        if (index < 0 || index > size)
-            return null;
-
-        while (index-- != 0)
-            curr = curr.next;
-        return curr.data;
-    }
-
-    @Override
-    public T set(int index, T element) {
-        Node curr = head;
-
-        if (index < 0 || index > size)
-            return null;
-
-        while (index-- != 0)
-            curr = curr.next;
-
-        T temp = curr.data;
-        curr.data = element;
-        size++;
-
-        return temp;
-    }
-
-    @Override
-    public void add(int index, T element) {
-        Node prev = head;
-        Node curr = head;
-        Node newNode = new Node(element);
-
-        if (index < 0 || index > size)
-            System.out.println("Invalid index.");
-        else {
-            while (index-- != 0) {
-                prev = curr;
-                curr = curr.next;
-            }
-
-            prev.next = newNode;
-            newNode.next = curr;
-        }
-        size++;
-    }
-
-    @Override
-    public T remove(int index) {
-        Node prev = head;
-        Node curr = head;
-
-        if (index < 0 || index > size)
-            return null;
-
-        while (index-- != 0) {
-            prev = curr;
-            curr = curr.next;
-        }
-
-        T temp = curr.data;
-        curr = curr.next;
-        prev.next = curr;
-        size--;
-
-        return temp;
-    }
-
-    @Override
-    public int indexOf(Object obj) {
-        int index = 0;
-        Node curr = head;
-
-        while (curr != null) {
-            if (curr.data.equals(obj))
-                return index;
-            index++;
-            curr = curr.next;
-        }
-
-        return -1;
-    }
-
-    @Override
-    public int lastIndexOf(Object obj) {
-        int index = 0;
-        int lastIndex = -1;
-        Node curr = head;
-
-        while (curr != null) {
-            if (curr.data.equals(obj))
-                lastIndex = index;
-            index++;
-            curr = curr.next;
-        }
-
-        return lastIndex;
+    public int size() {
+        return size;
     }
 
     @Override
@@ -256,29 +230,13 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        LicenseLinkedList<?> that = (LicenseLinkedList<?>) o;
-        return size == that.size && Objects.equals(head, that.head);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(head, size);
+    public int indexOf(Object obj) {
+        throw new UnsupportedOperationException("don't use it here");
     }
 
     @Override
     public Object[] toArray() {
-        Object[] arr = new Object[size];
-        Node curr = head;
-
-        for (int i = 0; i < size; i++) {
-            arr[i] = curr.data;
-            curr = curr.next;
-        }
-
-        return arr;
+        throw new UnsupportedOperationException("don't use it here");
     }
 
     @Override
@@ -310,4 +268,15 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
     public Iterator<T> iterator() {
         throw new UnsupportedOperationException("don't use it here");
     }
+
+    @Override
+    public int lastIndexOf(Object obj) {
+        throw new UnsupportedOperationException("don't use it here");
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends T> c) {
+        throw new UnsupportedOperationException("don't use it here");
+    }
 }
+
