@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 public abstract class CarService implements ICarService {
-    public static double OIL_95_RATE;
+    public static double GAS_95_RATE;
     Logger log = Logger.getLogger(CarService.class.getName());
     private String name;
     private String address;
@@ -29,7 +29,7 @@ public abstract class CarService implements ICarService {
     }
 
     static {
-        OIL_95_RATE = 3.65;
+        GAS_95_RATE = 3.65;
     }
 
     public List<Car> getCars() {

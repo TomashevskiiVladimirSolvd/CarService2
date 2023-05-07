@@ -44,8 +44,8 @@ public class Main {
         Set<String> set = new HashSet<>(arl);
         writeStringToFile(countUniqueWords, "The number of unique words is:" + set.size());
 
-        double oil95Rate = CarService.OIL_95_RATE;
-        log.info("The rate of Oil 95 is: " + oil95Rate);
+        double gas95Rate = CarService.GAS_95_RATE;
+        log.info("The rate of Gas 95 is: " + gas95Rate);
 
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
