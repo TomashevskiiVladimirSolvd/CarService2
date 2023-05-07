@@ -76,6 +76,8 @@ public class Main {
         } catch (GetDirtyException e) {
             log.info("Employees.Mechanic doesn't have gloves .His hands are dirty now.");
             e.printStackTrace();
+            mechanicTruck.setGlovesNumber(6);
+            mechanicTruck.useTheGloves();
         }
         printInfo(bossTruck);
         work(bossTruck);
@@ -117,6 +119,8 @@ public class Main {
         } catch (ToolException e) {
             log.info("You don't have tools .It is really bad");
             e.printStackTrace();
+            usualMechanic.setToolsNumber(5);
+            usualMechanic.fillFormOfBrokenTool();
         }
         printInfo(usualBoss);
         work(usualBoss);
