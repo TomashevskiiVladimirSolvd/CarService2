@@ -11,7 +11,7 @@ public class Car implements IPrintInfo {
     private String make;
     private String model;
 
-    public Map<Integer, String> oils = new TreeMap<>();
+    public Map<String, Integer> oils = new TreeMap<>();
 
     public Car(String make, String model) {
         this.make = make;

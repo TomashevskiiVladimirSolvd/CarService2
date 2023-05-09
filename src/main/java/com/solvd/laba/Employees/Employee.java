@@ -3,6 +3,9 @@ package com.solvd.laba.Employees;
 import com.solvd.laba.Interfaces.IPrintInfo;
 import com.solvd.laba.Interfaces.IWork;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Logger;
 
 abstract public class Employee implements IWork, IPrintInfo {

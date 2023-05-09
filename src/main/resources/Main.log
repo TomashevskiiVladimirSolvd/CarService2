@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2023-05-07T17:21:00.285192Z</date>
-  <millis>1683480060285</millis>
-  <nanos>192000</nanos>
+  <date>2023-05-09T02:50:18.052360Z</date>
+  <millis>1683600618052</millis>
+  <nanos>360000</nanos>
   <sequence>0</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
@@ -14,10 +14,22 @@
   <message>The rate of Gas 95 is: 3.65</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.348866Z</date>
-  <millis>1683480060348</millis>
-  <nanos>866000</nanos>
+  <date>2023-05-09T02:50:18.145618Z</date>
+  <millis>1683600618145</millis>
+  <nanos>618000</nanos>
   <sequence>1</sequence>
+  <logger>com.solvd.laba.MainMethod.Main</logger>
+  <level>INFO</level>
+  <class>com.solvd.laba.MainMethod.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>It's a weekday.Welcome</message>
+</record>
+<record>
+  <date>2023-05-09T02:50:18.146743Z</date>
+  <millis>1683600618146</millis>
+  <nanos>743000</nanos>
+  <sequence>2</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -26,10 +38,10 @@
   <message>Cars.Car services for Trucks:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.371422Z</date>
-  <millis>1683480060371</millis>
-  <nanos>422000</nanos>
-  <sequence>3</sequence>
+  <date>2023-05-09T02:50:18.171659Z</date>
+  <millis>1683600618171</millis>
+  <nanos>659000</nanos>
+  <sequence>4</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -38,10 +50,10 @@
   <message>Clients:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.377087Z</date>
-  <millis>1683480060377</millis>
-  <nanos>87000</nanos>
-  <sequence>6</sequence>
+  <date>2023-05-09T02:50:18.176566Z</date>
+  <millis>1683600618176</millis>
+  <nanos>566000</nanos>
+  <sequence>7</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -50,22 +62,22 @@
   <message>Employees:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.392503Z</date>
-  <millis>1683480060392</millis>
-  <nanos>503000</nanos>
-  <sequence>15</sequence>
+  <date>2023-05-09T02:50:18.196643Z</date>
+  <millis>1683600618196</millis>
+  <nanos>643000</nanos>
+  <sequence>16</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Employees.Mechanic doesn't have gloves .His hands are dirty now.</message>
+  <message>Mechanic doesn't have gloves .His hands are dirty now.</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.398375Z</date>
-  <millis>1683480060398</millis>
-  <nanos>375000</nanos>
-  <sequence>20</sequence>
+  <date>2023-05-09T02:50:18.203590Z</date>
+  <millis>1683600618203</millis>
+  <nanos>590000</nanos>
+  <sequence>21</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -74,10 +86,10 @@
   <message>Cars:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.404028Z</date>
-  <millis>1683480060404</millis>
-  <nanos>28000</nanos>
-  <sequence>26</sequence>
+  <date>2023-05-09T02:50:18.208370Z</date>
+  <millis>1683600618208</millis>
+  <nanos>370000</nanos>
+  <sequence>27</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -86,10 +98,10 @@
   <message>Hash Code30784</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.405682Z</date>
-  <millis>1683480060405</millis>
-  <nanos>682000</nanos>
-  <sequence>28</sequence>
+  <date>2023-05-09T02:50:18.209405Z</date>
+  <millis>1683600618209</millis>
+  <nanos>405000</nanos>
+  <sequence>29</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -98,10 +110,10 @@
   <message>Cars.Car services for usual cars:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.410967Z</date>
-  <millis>1683480060410</millis>
-  <nanos>967000</nanos>
-  <sequence>30</sequence>
+  <date>2023-05-09T02:50:18.211598Z</date>
+  <millis>1683600618211</millis>
+  <nanos>598000</nanos>
+  <sequence>31</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -110,10 +122,10 @@
   <message>Employees:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.414264Z</date>
-  <millis>1683480060414</millis>
-  <nanos>264000</nanos>
-  <sequence>34</sequence>
+  <date>2023-05-09T02:50:18.213924Z</date>
+  <millis>1683600618213</millis>
+  <nanos>924000</nanos>
+  <sequence>35</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -122,10 +134,10 @@
   <message>Fake car Insurance is illegal,You'll be in jail</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.418520Z</date>
-  <millis>1683480060418</millis>
-  <nanos>520000</nanos>
-  <sequence>39</sequence>
+  <date>2023-05-09T02:50:18.216903Z</date>
+  <millis>1683600618216</millis>
+  <nanos>903000</nanos>
+  <sequence>40</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -134,10 +146,10 @@
   <message>You don't have tools .It is really bad</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.425996Z</date>
-  <millis>1683480060425</millis>
-  <nanos>996000</nanos>
-  <sequence>45</sequence>
+  <date>2023-05-09T02:50:18.221162Z</date>
+  <millis>1683600618221</millis>
+  <nanos>162000</nanos>
+  <sequence>46</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -146,10 +158,10 @@
   <message>No such file or directory</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.427175Z</date>
-  <millis>1683480060427</millis>
-  <nanos>175000</nanos>
-  <sequence>46</sequence>
+  <date>2023-05-09T02:50:18.223038Z</date>
+  <millis>1683600618223</millis>
+  <nanos>38000</nanos>
+  <sequence>47</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -158,10 +170,10 @@
   <message>Cars:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.430995Z</date>
-  <millis>1683480060430</millis>
-  <nanos>995000</nanos>
-  <sequence>52</sequence>
+  <date>2023-05-09T02:50:18.228141Z</date>
+  <millis>1683600618228</millis>
+  <nanos>141000</nanos>
+  <sequence>53</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -170,22 +182,22 @@
   <message>Hash Code30784</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.432741Z</date>
-  <millis>1683480060432</millis>
-  <nanos>741000</nanos>
-  <sequence>55</sequence>
+  <date>2023-05-09T02:50:18.230131Z</date>
+  <millis>1683600618230</millis>
+  <nanos>131000</nanos>
+  <sequence>56</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Cars.Car services for Trailers:</message>
+  <message>Car services for Trailers:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.435533Z</date>
-  <millis>1683480060435</millis>
-  <nanos>533000</nanos>
-  <sequence>57</sequence>
+  <date>2023-05-09T02:50:18.233159Z</date>
+  <millis>1683600618233</millis>
+  <nanos>159000</nanos>
+  <sequence>58</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -194,10 +206,10 @@
   <message>Employees:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.440585Z</date>
-  <millis>1683480060440</millis>
-  <nanos>585000</nanos>
-  <sequence>67</sequence>
+  <date>2023-05-09T02:50:18.244988Z</date>
+  <millis>1683600618244</millis>
+  <nanos>988000</nanos>
+  <sequence>68</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -206,10 +218,10 @@
   <message>Cars:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.445305Z</date>
-  <millis>1683480060445</millis>
-  <nanos>305000</nanos>
-  <sequence>73</sequence>
+  <date>2023-05-09T02:50:18.249852Z</date>
+  <millis>1683600618249</millis>
+  <nanos>852000</nanos>
+  <sequence>74</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -218,10 +230,10 @@
   <message>Hash Code30784</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.446729Z</date>
-  <millis>1683480060446</millis>
-  <nanos>729000</nanos>
-  <sequence>75</sequence>
+  <date>2023-05-09T02:50:18.251228Z</date>
+  <millis>1683600618251</millis>
+  <nanos>228000</nanos>
+  <sequence>76</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -230,10 +242,10 @@
   <message>List of Oil price:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.448143Z</date>
-  <millis>1683480060448</millis>
-  <nanos>143000</nanos>
-  <sequence>77</sequence>
+  <date>2023-05-09T02:50:18.261220Z</date>
+  <millis>1683600618261</millis>
+  <nanos>220000</nanos>
+  <sequence>78</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>
@@ -242,10 +254,58 @@
   <message>List of car maintenance:</message>
 </record>
 <record>
-  <date>2023-05-07T17:21:00.451626Z</date>
-  <millis>1683480060451</millis>
-  <nanos>626000</nanos>
+  <date>2023-05-09T02:50:18.268523Z</date>
+  <millis>1683600618268</millis>
+  <nanos>523000</nanos>
+  <sequence>79</sequence>
+  <logger>com.solvd.laba.MainMethod.Main</logger>
+  <level>INFO</level>
+  <class>com.solvd.laba.MainMethod.Main</class>
+  <method>lambda$main$2</method>
+  <thread>1</thread>
+  <message>Air Filter change</message>
+</record>
+<record>
+  <date>2023-05-09T02:50:18.272924Z</date>
+  <millis>1683600618272</millis>
+  <nanos>924000</nanos>
+  <sequence>80</sequence>
+  <logger>com.solvd.laba.MainMethod.Main</logger>
+  <level>INFO</level>
+  <class>com.solvd.laba.MainMethod.Main</class>
+  <method>lambda$main$2</method>
+  <thread>1</thread>
+  <message>Light change</message>
+</record>
+<record>
+  <date>2023-05-09T02:50:18.273896Z</date>
+  <millis>1683600618273</millis>
+  <nanos>896000</nanos>
+  <sequence>81</sequence>
+  <logger>com.solvd.laba.MainMethod.Main</logger>
+  <level>INFO</level>
+  <class>com.solvd.laba.MainMethod.Main</class>
+  <method>lambda$main$2</method>
+  <thread>1</thread>
+  <message>Oil change</message>
+</record>
+<record>
+  <date>2023-05-09T02:50:18.274605Z</date>
+  <millis>1683600618274</millis>
+  <nanos>605000</nanos>
   <sequence>82</sequence>
+  <logger>com.solvd.laba.MainMethod.Main</logger>
+  <level>INFO</level>
+  <class>com.solvd.laba.MainMethod.Main</class>
+  <method>lambda$main$2</method>
+  <thread>1</thread>
+  <message>Tire rotation</message>
+</record>
+<record>
+  <date>2023-05-09T02:50:18.275310Z</date>
+  <millis>1683600618275</millis>
+  <nanos>310000</nanos>
+  <sequence>83</sequence>
   <logger>com.solvd.laba.MainMethod.Main</logger>
   <level>INFO</level>
   <class>com.solvd.laba.MainMethod.Main</class>

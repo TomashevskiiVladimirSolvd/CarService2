@@ -12,7 +12,22 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 public abstract class CarService implements ICarService {
+    public enum DayOfWeek {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY
+    }
+
     public static double GAS_95_RATE;
+
+    static {
+        GAS_95_RATE = 3.65;
+    }
+
     Logger log = Logger.getLogger(CarService.class.getName());
     private String name;
     private String address;
@@ -26,10 +41,6 @@ public abstract class CarService implements ICarService {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
-    }
-
-    static {
-        GAS_95_RATE = 3.65;
     }
 
     public List<Car> getCars() {

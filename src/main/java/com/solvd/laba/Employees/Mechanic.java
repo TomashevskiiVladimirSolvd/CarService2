@@ -68,12 +68,6 @@ public class Mechanic extends Employee {
             throw new GetDirtyException("Mechanic doesn't have gloves .His hands are dirty now.");
         }
     }
-
-    public void printCarMaintenance() {
-        for (String maitenance : carMaintenance) {
-            log.info(maitenance);
-        }
-    }
 }
 
 
