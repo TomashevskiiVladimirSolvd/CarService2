@@ -1,7 +1,7 @@
 package com.solvd.laba.Employees;
 
 import com.solvd.laba.Exceptions.*;
-
+import org.apache.log4j.Logger;
 
 public class Manager extends Employee {
     private int insuranceNumber;

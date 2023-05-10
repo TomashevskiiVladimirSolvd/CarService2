@@ -118,13 +118,12 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
 
     @Override
     public boolean addAll(Collection<? extends T> c) {
-        boolean modified = false;
-        for (T element : c) {
-            if (add(element)) {
-                modified = true;
-            }
-        }
-        return modified;
+        int preSize = size;
+        for (Object obj : c)
+            if (!contains(obj))
+                add((T) obj);
+
+        return preSize > size;
     }
 
     @Override

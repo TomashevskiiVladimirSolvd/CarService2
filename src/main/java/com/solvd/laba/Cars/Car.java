@@ -2,12 +2,13 @@ package com.solvd.laba.Cars;
 
 import com.solvd.laba.Interfaces.IPrintInfo;
 
-import java.util.TreeMap;
-import java.util.logging.Logger;
 import java.util.Map;
+import java.util.TreeMap;
+
+import org.apache.log4j.Logger;
 
 public class Car implements IPrintInfo {
-    Logger log = Logger.getLogger(Car.class.getName());
+    Logger log = Logger.getLogger(Car.class);
     private String make;
     private String model;
 

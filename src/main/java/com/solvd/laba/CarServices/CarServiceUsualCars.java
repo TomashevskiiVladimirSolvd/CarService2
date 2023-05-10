@@ -2,8 +2,10 @@ package com.solvd.laba.CarServices;
 
 import com.solvd.laba.Interfaces.ICarTuning;
 import com.solvd.laba.Interfaces.IPrintInfo;
+import org.apache.log4j.Logger;
 
 public class CarServiceUsualCars extends CarService implements ICarTuning, IPrintInfo {
+    Logger log = Logger.getLogger(CarServiceUsualCars.class);
     boolean isSpoilerInStock;
 
     public CarServiceUsualCars(String name, String address, long phoneNumber, boolean isSpoilerInStock) {

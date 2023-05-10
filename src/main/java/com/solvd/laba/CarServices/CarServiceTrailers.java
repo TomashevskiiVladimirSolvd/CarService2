@@ -1,10 +1,13 @@
 package com.solvd.laba.CarServices;
 
+import com.solvd.laba.Cars.Car;
 import com.solvd.laba.Interfaces.IDesignChanges;
 import com.solvd.laba.Interfaces.IPrintInfo;
+import com.solvd.laba.MainMethod.Main;
+import org.apache.log4j.Logger;
 
 public class CarServiceTrailers extends CarService implements IDesignChanges, IPrintInfo {
-
+    Logger log = Logger.getLogger(CarServiceTrailers.class);
     boolean isFridgeInStock;
 
     public CarServiceTrailers(String name, String address, long phoneNumber, boolean isFridgeInStock) {

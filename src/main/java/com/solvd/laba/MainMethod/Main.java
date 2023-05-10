@@ -21,20 +21,18 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Logger;
+
 import java.util.stream.Collectors;
 
 import static org.apache.commons.io.FileUtils.writeStringToFile;
 
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Logger log = Logger.getLogger(Main.class.getName());
-        FileHandler fh;
-        fh = new FileHandler("src/main/resources/Main.log");
-        log.addHandler(fh);
-        //File.Utils
+        Logger log = Logger.getLogger(Main.class);
         File text = new File("src/main/resources/text.txt");
         File countUniqueWords = new File("src/main/resources/countUniqueWords.txt");
         String content = FileUtils.readFileToString(text, StandardCharsets.UTF_8.name());
@@ -233,10 +231,6 @@ public class Main {
         licensePlateInteger2.add(586768);
         licensePlateInteger2.add(586760);
 
-        LicenseLinkedList<Integer> allIntegerLicensePlate = new LicenseLinkedList<>();
-        allIntegerLicensePlate.addAll(licensePlateInteger);
-        allIntegerLicensePlate.addAll(licensePlateInteger2);
-        System.out.println(allIntegerLicensePlate);
 
     }
 

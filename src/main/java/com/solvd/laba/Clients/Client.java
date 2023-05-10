@@ -1,11 +1,12 @@
 package com.solvd.laba.Clients;
 
+import com.solvd.laba.CarServices.CarServiceUsualCars;
 import com.solvd.laba.Interfaces.IPrintInfo;
 
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 public class Client implements IPrintInfo {
-    Logger log = Logger.getLogger(Client.class.getName());
+    Logger log = Logger.getLogger(Client.class);
     private String name;
     private String address;
 

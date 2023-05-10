@@ -1,10 +1,13 @@
 package com.solvd.laba.CarServices;
 
+import com.solvd.laba.Cars.Car;
 import com.solvd.laba.Interfaces.IPrintInfo;
 import com.solvd.laba.Interfaces.IWeighting;
+import org.apache.log4j.Logger;
+
 
 public class CarServiceTrucks extends CarService implements IWeighting, IPrintInfo {
-
+    Logger log = Logger.getLogger(CarServiceTrucks.class);
     private boolean isWeightStationHere;
 
     public CarServiceTrucks(String name, String address, long phoneNumber, boolean isWeightStationHere) {
