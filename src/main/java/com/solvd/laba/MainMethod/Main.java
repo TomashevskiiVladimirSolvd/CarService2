@@ -15,6 +15,7 @@ import com.solvd.laba.Interfaces.ICheck;
 import com.solvd.laba.Interfaces.IPrintInfo;
 import com.solvd.laba.Interfaces.IWork;
 import com.solvd.laba.Licenses.LicenseLinkedList;
+import com.solvd.laba.LogRead;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -26,20 +27,11 @@ import org.apache.log4j.Logger;
 
 import java.util.stream.Collectors;
 
-import static org.apache.commons.io.FileUtils.writeStringToFile;
-
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Logger log = Logger.getLogger(Main.class);
-        File text = new File("src/main/resources/text.txt");
-        File countUniqueWords = new File("src/main/resources/countUniqueWords.txt");
-        String content = FileUtils.readFileToString(text, StandardCharsets.UTF_8.name());
-        String[] arr = content.split("[^a-zA-Z]+");
-        ArrayList<String> arl = new ArrayList<>(Arrays.asList(arr));
-        Set<String> set = new HashSet<>(arl);
-        writeStringToFile(countUniqueWords, "The number of unique words is:" + set.size());
         //Static Variable and Block
         double gas95Rate = CarService.GAS_95_RATE;
         log.info("The rate of Gas 95 is: " + gas95Rate);
@@ -230,6 +222,8 @@ public class Main {
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
         licensePlateInteger2.add(586768);
         licensePlateInteger2.add(586760);
+        LogRead logRead = new LogRead();
+        logRead.countUniqueWords("src/main/resources/countUniqueWords.txt");
 
 
     }
