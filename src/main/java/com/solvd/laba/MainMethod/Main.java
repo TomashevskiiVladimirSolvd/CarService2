@@ -78,6 +78,7 @@ public class Main {
         Car truckcar2 = new Car("Volvo", "VNL400");
         log.info("Cars:");
         printInfo(truckcar1);
+        truckcar1.printColorCode();
         printInfo(truckcar2);
         cSTrucks.washCar();
         cSTrucks.waxCar();

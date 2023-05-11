@@ -10,13 +10,76 @@ public class Car implements IPrintInfo {
     Logger log = Logger.getLogger(Car.class);
     private String make;
     private String model;
-
     private Map<String, Integer> oils = new HashMap<>() {{
         put("PORCSHE", 400);
         put("CASTROL", 200);
         put("PENNZOIL", 300);
         put("MOBIL", 100);
     }};
+    private Set<String> carMaintenance = new TreeSet<>(Arrays.asList("Oil change", "Tire rotation",
+            "Light change", "Air Filter change"));
+
+    public enum Color {
+        RED,
+        GREEN,
+        BLUE,
+        YELLOW,
+        ORANGE,
+        PURPLE,
+        PINK,
+        BROWN,
+        BLACK,
+        WHITE
+    }
+
+    public Car(String make, String model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    public void printColorCode() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a color: ");
+        String colorInput = scanner.nextLine();
+
+        Color color = Color.valueOf(colorInput.toUpperCase());
+
+        switch (color) {
+            case RED:
+                System.out.println("The color code for RED is #FF0000");
+                break;
+            case GREEN:
+                System.out.println("The color code for GREEN is #00FF00");
+                break;
+            case BLUE:
+                System.out.println("The color code for BLUE is #0000FF");
+                break;
+            case YELLOW:
+                System.out.println("The color code for YELLOW is #FFFF00");
+                break;
+            case ORANGE:
+                System.out.println("The color code for ORANGE is #FFA500");
+                break;
+            case PURPLE:
+                System.out.println("The color code for PURPLE is #800080");
+                break;
+            case PINK:
+                System.out.println("The color code for PINK is #FFC0CB");
+                break;
+            case BROWN:
+                System.out.println("The color code for BROWN is #A52A2A");
+                break;
+            case BLACK:
+                System.out.println("The color code for BLACK is #000000");
+                break;
+            case WHITE:
+                System.out.println("The color code for WHITE is #FFFFFF");
+                break;
+            default:
+                System.out.println("Unknown color");
+        }
+    }
 
     public void chooseOilAndTellPrice(Map<String, Integer> oils) {
         Scanner scanner = new Scanner(System.in);
@@ -30,9 +93,6 @@ public class Car implements IPrintInfo {
             System.out.println("Sorry, we don't have " + input + " in stock.");
         }
     }
-
-    private Set<String> carMaintenance = new TreeSet<>(Arrays.asList("Oil change", "Tire rotation",
-            "Light change", "Air Filter change"));
 
     public String chooseMaintenance() {
         Scanner scanner = new Scanner(System.in);
@@ -50,11 +110,6 @@ public class Car implements IPrintInfo {
         String selectedTask = (String) getCarMaintenance().toArray()[choice - 1];
         log.info("You have selected: " + selectedTask);
         return selectedTask;
-    }
-
-    public Car(String make, String model) {
-        this.make = make;
-        this.model = model;
     }
 
     public Map<String, Integer> getOils() {
