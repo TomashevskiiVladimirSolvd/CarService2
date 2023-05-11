@@ -118,12 +118,10 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
 
     @Override
     public boolean addAll(Collection<? extends T> c) {
-        int preSize = size;
-        for (Object obj : c)
-            if (!contains(obj))
-                add((T) obj);
-
-        return preSize > size;
+        for (T item : c) {
+            add(item);
+        }
+        return true;
     }
 
     @Override
@@ -268,7 +266,23 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
 
     @Override
     public Iterator<T> iterator() {
-        throw new UnsupportedOperationException("don't use it here");
+        return new Iterator<>() {
+            private Node current = head;
+
+            public boolean hasNext() {
+                return current != null;
+            }
+
+            public T next() {
+                T data = current.data;
+                current = current.next;
+                return data;
+            }
+
+            public void remove() {
+                throw new UnsupportedOperationException();
+            }
+        };
     }
 
     @Override

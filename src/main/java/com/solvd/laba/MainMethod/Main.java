@@ -21,6 +21,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.time.MonthDay;
 import java.util.*;
 
 import org.apache.log4j.Logger;
@@ -200,9 +201,15 @@ public class Main {
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
         licensePlateInteger2.add(586768);
         licensePlateInteger2.add(586760);
+
+        licensePlateInteger.addAll(licensePlateInteger2);
+        Iterator<Integer> iterator = licensePlateInteger.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
         LogRead logRead = new LogRead();
         logRead.countUniqueWords("src/main/resources/countUniqueWords.txt");
-
 
     }
 
