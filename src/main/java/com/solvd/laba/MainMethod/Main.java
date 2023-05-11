@@ -10,10 +10,7 @@ import com.solvd.laba.Clients.Client;
 import com.solvd.laba.Employees.Boss;
 import com.solvd.laba.Employees.Manager;
 import com.solvd.laba.Employees.Mechanic;
-import com.solvd.laba.Interfaces.ICarService;
-import com.solvd.laba.Interfaces.ICheck;
-import com.solvd.laba.Interfaces.IPrintInfo;
-import com.solvd.laba.Interfaces.IWork;
+import com.solvd.laba.Interfaces.*;
 import com.solvd.laba.Licenses.LicenseLinkedList;
 import com.solvd.laba.LogRead;
 
@@ -35,12 +32,18 @@ public class Main {
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
-        //Custom lambda
+        //Custom lambda1
         ICheck iCheckContains = (str1, str2) -> str1.contains(str2);
         System.out.println(iCheckContains.check(cSTrucks.getName(), "Truck"));
-
+        //Custom lambda2
         ICheck iCheckContains2 = (str1, str2) -> str1.equals(str2);
         System.out.println(iCheckContains2.check(cSTrucks.getName(), "TruckFix"));
+        //Custom lambda3
+        IUppercasePredicate iUppercasePredicate = str -> str.equals(str.toUpperCase());
+        System.out.println(iUppercasePredicate.isUppercase(cSTrucks.getName()));
+        //Custom lambda4
+        IStringConsumer iStringConsumer = str -> System.out.println(str.length());
+        iStringConsumer.printLength(cSTrucks.getName());
 
         Client clientTruck = new Client("Bill Monroe", "555 Dickson street");
         log.info("Clients:");
@@ -141,7 +144,6 @@ public class Main {
         cSUsual.installSpoilers(cSUsual.isSpoilerInStock());
         cSUsual.tintingWindows();
 
-
         log.info("Car services for Trailers:");
         CarServiceTrailers cSTrailers = new CarServiceTrailers("TrailersGood", "333 Madison road", 43456788, false);
         printInfo(cSTrailers);
@@ -183,7 +185,6 @@ public class Main {
         System.out.println(licensePlateString.size());
         System.out.println(licensePlateString.get(1));
 
-
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
         licensePlateInteger.add(123456);
         licensePlateInteger.clear();
@@ -193,12 +194,9 @@ public class Main {
         licensePlateInteger.printInfo();
         System.out.println("Is this empty list: " + licensePlateInteger.isEmpty());
         System.out.println(licensePlateInteger.contains(857576));
-
-
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
         licensePlateInteger2.add(586768);
         licensePlateInteger2.add(586760);
-
         licensePlateInteger.addAll(licensePlateInteger2);
         Iterator<Integer> iterator = licensePlateInteger.iterator();
         while (iterator.hasNext()) {
