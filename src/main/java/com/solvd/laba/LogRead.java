@@ -23,6 +23,8 @@ public class LogRead {
             System.out.println("Result written to file.");
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (SecurityException e) {
+            e.printStackTrace();
         }
     }
 }

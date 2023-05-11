@@ -9,7 +9,7 @@ import java.util.Set;
 public class Mechanic extends Employee {
     private int toolsNumber;
     private int glovesNumber;
-    public Set<String> carMaintenance = new TreeSet<>();
+
 
     public Mechanic(String name, String position, String address, int toolsNumber, int glovesNumber) {
         super(name, position, address);

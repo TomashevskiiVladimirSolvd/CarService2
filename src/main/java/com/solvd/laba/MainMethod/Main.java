@@ -27,21 +27,17 @@ import org.apache.log4j.Logger;
 
 import java.util.stream.Collectors;
 
+import static com.solvd.laba.Interfaces.ICarService.GAS_95_RATE;
+
 
 public class Main {
 
     public static void main(String[] args) {
         Logger log = Logger.getLogger(Main.class);
-        //Static Variable and Block
-        double gas95Rate = CarService.GAS_95_RATE;
+        CarService.chooseDay();
+        double gas95Rate = GAS_95_RATE;
         log.info("The rate of Gas 95 is: " + gas95Rate);
-        //ENUM
-        CarService.DayOfWeek today = CarService.DayOfWeek.FRIDAY;
-        if (today == CarService.DayOfWeek.SATURDAY || today == CarService.DayOfWeek.SUNDAY) {
-            log.info("It is weekend .Car Services are closed.");
-        } else {
-            log.info("It's a weekday.Welcome");
-        }
+
         log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
@@ -168,6 +164,8 @@ public class Main {
         Car trailercar2 = new Car("Ford", "Chateau");
         log.info("Cars:");
         printInfo(trailercar1);
+        trailercar1.chooseMaintenance();
+        trailercar1.chooseOilAndTellPrice(trailercar1.getOils());
         printInfo(trailercar2);
         cSTrailers.waxCar();
         cSTrailers.washCar();
@@ -175,26 +173,6 @@ public class Main {
         log.info("Hash Code" + cSTrailers.hashCode());
         cSTrailers.kitchenChange(cSTrailers.isFridgeInStock());
 
-        log.info("List of Oil price:");
-        trailercar1.oils.put("Porcshe", 400);
-        trailercar1.oils.put("Castrol", 200);
-        trailercar1.oils.put("Pennzoil", 300);
-        trailercar1.oils.put("Mobil", 100);
-        trailercar1.printOilPrice();
-
-        //lambda from java.util.function 1
-        Map<String, Integer> filteredMap = trailercar1.oils.entrySet().stream()
-                .filter(entry -> entry.getValue() > 200)
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        System.out.println(filteredMap);
-
-        log.info("List of car maintenance:");
-        trailerMechanic.carMaintenance.add("Oil change");
-        trailerMechanic.carMaintenance.add("Tire rotation");
-        trailerMechanic.carMaintenance.add("Light change");
-        trailerMechanic.carMaintenance.add("Air Filter change");
-        //lambda
-        trailerMechanic.carMaintenance.forEach(name -> log.info(name));
 
         log.info("Available lisence plates:");
         LicenseLinkedList<String> licensePlateString = new LicenseLinkedList<>();

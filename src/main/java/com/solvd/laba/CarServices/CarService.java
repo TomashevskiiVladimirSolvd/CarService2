@@ -8,6 +8,7 @@ import com.solvd.laba.Employees.Employee;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
@@ -20,12 +21,6 @@ public abstract class CarService implements ICarService {
         FRIDAY,
         SATURDAY,
         SUNDAY
-    }
-
-    public static double GAS_95_RATE;
-
-    static {
-        GAS_95_RATE = 3.65;
     }
 
     Logger log = Logger.getLogger(CarService.class.getName());
@@ -99,6 +94,24 @@ public abstract class CarService implements ICarService {
 
     public String equals(ArrayList<Employee> employees, ArrayList<Client> clients) {
         return "Equals" + employees.equals(clients);
+    }
+
+    public static DayOfWeek chooseDay() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a day of the week (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY):");
+        String input = scanner.nextLine();
+        try {
+            DayOfWeek day = DayOfWeek.valueOf(input.toUpperCase());
+            if (day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY) {
+                System.out.println("It's the weekend!");
+            } else {
+                System.out.println("It's a weekday.");
+            }
+            return day;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid day of the week. Please try again.");
+            return chooseDay();
+        }
     }
 
 
