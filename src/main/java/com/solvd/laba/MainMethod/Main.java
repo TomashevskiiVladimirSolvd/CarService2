@@ -16,20 +16,13 @@ import com.solvd.laba.Interfaces.IPrintInfo;
 import com.solvd.laba.Interfaces.IWork;
 import com.solvd.laba.Licenses.LicenseLinkedList;
 import com.solvd.laba.LogRead;
-import org.apache.commons.io.FileUtils;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.time.MonthDay;
 import java.util.*;
 
 import org.apache.log4j.Logger;
 
-import java.util.stream.Collectors;
-
 import static com.solvd.laba.Interfaces.ICarService.GAS_95_RATE;
-
 
 public class Main {
 
@@ -45,6 +38,9 @@ public class Main {
         //Custom lambda
         ICheck iCheckContains = (str1, str2) -> str1.contains(str2);
         System.out.println(iCheckContains.check(cSTrucks.getName(), "Truck"));
+
+        ICheck iCheckContains2 = (str1, str2) -> str1.equals(str2);
+        System.out.println(iCheckContains2.check(cSTrucks.getName(), "TruckFix"));
 
         Client clientTruck = new Client("Bill Monroe", "555 Dickson street");
         log.info("Clients:");
