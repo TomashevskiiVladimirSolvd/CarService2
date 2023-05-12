@@ -13,15 +13,10 @@ import com.solvd.laba.Employees.Mechanic;
 import com.solvd.laba.Interfaces.*;
 import com.solvd.laba.Licenses.LicenseLinkedList;
 import com.solvd.laba.LogRead;
-
 import java.io.IOException;
 import java.util.*;
-import java.util.function.DoubleToIntFunction;
-import java.util.function.IntFunction;
 import java.util.stream.Collectors;
-
 import org.apache.log4j.Logger;
-
 import static com.solvd.laba.Interfaces.ICarService.GAS_95_RATE;
 
 public class Main {
@@ -30,11 +25,7 @@ public class Main {
         Logger log = Logger.getLogger(Main.class);
         CarService.chooseDay();
         double gas95Rate = GAS_95_RATE;
-        log.info("The rate of Gas 95 is: " + gas95Rate);
-        //Lambda1 from java.util.function
-        DoubleToIntFunction doubleToInt = GAS_95_RATE -> (int) GAS_95_RATE;
-        //Lambda2 from java.util.function
-        IntFunction<String> intToString = GAS_95_RATE -> Integer.toString(GAS_95_RATE);
+        log.info("The rate of gas-95 is: " + gas95Rate);
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
         //Custom lambda1
