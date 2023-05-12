@@ -159,7 +159,7 @@ public class Main {
         printInfo(trailercar1);
         trailercar1.chooseServiceType();
         trailercar1.chooseOilAndTellPrice(trailercar1.getOils());
-        //Stream
+        //Stream1
         double avgPrice = trailercar1.getOils().values()
                 .stream()
                 .mapToInt(Integer::intValue)
@@ -186,15 +186,15 @@ public class Main {
         licensePlateString.printInfo();
         System.out.println(licensePlateString.size());
         System.out.println(licensePlateString.get(1));
-        //Stream
+        //Stream2
         List<String> limited = licensePlateString.stream()
                 .limit(2)
                 .collect(Collectors.toList());
-        //Stream
+        //Stream3
         List<String> filteredLicensePlates = licensePlateString.stream()
                 .filter(name -> name.startsWith("k"))
                 .collect(Collectors.toList());
-        //Stream
+        //Stream4
         long count = licensePlateString.stream().count();
 
 
@@ -204,7 +204,7 @@ public class Main {
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
-        //Stream
+        //Stream5
         boolean containsNumber = licensePlateInteger.stream()
                 .anyMatch(s -> s.equals(284045));
         licensePlateInteger.printInfo();
