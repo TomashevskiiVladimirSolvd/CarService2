@@ -16,6 +16,7 @@ import com.solvd.laba.LogRead;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
@@ -28,20 +29,15 @@ public class Main {
         CarService.chooseDay();
         double gas95Rate = GAS_95_RATE;
         log.info("The rate of Gas 95 is: " + gas95Rate);
-
-        log.info("Cars.Car services for Trucks:");
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
         //Custom lambda1
         ICheck iCheckContains = (str1, str2) -> str1.contains(str2);
         System.out.println(iCheckContains.check(cSTrucks.getName(), "Truck"));
         //Custom lambda2
-        ICheck iCheckContains2 = (str1, str2) -> str1.equals(str2);
-        System.out.println(iCheckContains2.check(cSTrucks.getName(), "TruckFix"));
+        IUppercase iUppercase = str -> str.equals(str.toUpperCase());
+        System.out.println(iUppercase.isUppercase(cSTrucks.getName()));
         //Custom lambda3
-        IUppercasePredicate iUppercasePredicate = str -> str.equals(str.toUpperCase());
-        System.out.println(iUppercasePredicate.isUppercase(cSTrucks.getName()));
-        //Custom lambda4
         IStringConsumer iStringConsumer = str -> System.out.println(str.length());
         iStringConsumer.printLength(cSTrucks.getName());
 
@@ -164,8 +160,16 @@ public class Main {
         Car trailercar2 = new Car("Ford", "Chateau");
         log.info("Cars:");
         printInfo(trailercar1);
-        trailercar1.chooseMaintenance();
+        trailercar1.chooseServiceType();
         trailercar1.chooseOilAndTellPrice(trailercar1.getOils());
+        //Stream
+        double avgPrice = trailercar1.getOils().values()
+                .stream()
+                .mapToInt(Integer::intValue)
+                .average()
+                .orElse(0.0);
+
+        System.out.println("Average price of oils: " + avgPrice);
         printInfo(trailercar2);
         cSTrailers.waxCar();
         cSTrailers.washCar();
@@ -177,13 +181,24 @@ public class Main {
         log.info("Available lisence plates:");
         LicenseLinkedList<String> licensePlateString = new LicenseLinkedList<>();
         licensePlateString.add("plate");
-        licensePlateString.add("pplate");
-        licensePlateString.add("pllate");
-        licensePlateString.add("plaate");
+        licensePlateString.add("blate");
+        licensePlateString.add("klate");
+        licensePlateString.add("mlaate");
         licensePlateString.remove(2);
         licensePlateString.printInfo();
         System.out.println(licensePlateString.size());
         System.out.println(licensePlateString.get(1));
+        //Stream
+        List<String> limited = licensePlateString.stream()
+                .limit(2)
+                .collect(Collectors.toList());
+        //Stream
+        List<String> filteredLicensePlates = licensePlateString.stream()
+                .filter(name -> name.startsWith("k"))
+                .collect(Collectors.toList());
+        //Stream
+        long count = licensePlateString.stream().count();
+
 
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
         licensePlateInteger.add(123456);
@@ -191,6 +206,9 @@ public class Main {
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
+        //Stream
+        boolean containsNumber = licensePlateInteger.stream()
+                .anyMatch(s -> s.equals(284045));
         licensePlateInteger.printInfo();
         System.out.println("Is this empty list: " + licensePlateInteger.isEmpty());
         System.out.println(licensePlateInteger.contains(857576));

@@ -1,5 +1,5 @@
 package com.solvd.laba.Interfaces;
 
-public interface IUppercasePredicate {
+public interface IUppercase {
     boolean isUppercase(String str);
 }

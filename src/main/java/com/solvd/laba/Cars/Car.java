@@ -16,7 +16,7 @@ public class Car implements IPrintInfo {
         put("PENNZOIL", 300);
         put("MOBIL", 100);
     }};
-    private Set<String> carMaintenance = new TreeSet<>(Arrays.asList("Oil change", "Tire rotation",
+    private Set<String> serviceType = new TreeSet<>(Arrays.asList("Oil change", "Tire rotation",
             "Light change", "Air Filter change"));
 
     public enum Color {
@@ -40,7 +40,7 @@ public class Car implements IPrintInfo {
     public void printColorCode() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a color: ");
+        System.out.println("Enter a color(RED GREEN BLUE YELLOW ORANGE PURPLE PINK BROWN BLACK WHITE): ");
         String colorInput = scanner.nextLine();
 
         Color color = Color.valueOf(colorInput.toUpperCase());
@@ -94,20 +94,20 @@ public class Car implements IPrintInfo {
         }
     }
 
-    public String chooseMaintenance() {
+    public String chooseServiceType() {
         Scanner scanner = new Scanner(System.in);
         log.info("Please choose a maintenance task from the following options:");
         int i = 1;
-        for (String maintenanceTask : getCarMaintenance()) {
+        for (String maintenanceTask : getServiceType()) {
             log.info(i + ". " + maintenanceTask);
             i++;
         }
         int choice = scanner.nextInt();
-        if (choice < 1 || choice > getCarMaintenance().size()) {
+        if (choice < 1 || choice > getServiceType().size()) {
             log.info("Invalid choice. Please try again.");
-            return chooseMaintenance();
+            return chooseServiceType();
         }
-        String selectedTask = (String) getCarMaintenance().toArray()[choice - 1];
+        String selectedTask = (String) getServiceType().toArray()[choice - 1];
         log.info("You have selected: " + selectedTask);
         return selectedTask;
     }
@@ -120,12 +120,12 @@ public class Car implements IPrintInfo {
         this.oils = oils;
     }
 
-    public Set<String> getCarMaintenance() {
-        return carMaintenance;
+    public Set<String> getServiceType() {
+        return serviceType;
     }
 
-    public void setCarMaintenance(Set<String> carMaintenance) {
-        this.carMaintenance = carMaintenance;
+    public void setServiceType(Set<String> serviceType) {
+        this.serviceType = serviceType;
     }
 
     public String getMake() {
