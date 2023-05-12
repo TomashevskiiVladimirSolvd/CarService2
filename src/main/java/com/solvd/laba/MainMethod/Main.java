@@ -16,6 +16,8 @@ import com.solvd.laba.LogRead;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.function.DoubleToIntFunction;
+import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
@@ -29,6 +31,10 @@ public class Main {
         CarService.chooseDay();
         double gas95Rate = GAS_95_RATE;
         log.info("The rate of Gas 95 is: " + gas95Rate);
+        //Lambda1 from java.util.function
+        DoubleToIntFunction doubleToInt = GAS_95_RATE -> (int) GAS_95_RATE;
+        //Lambda2 from java.util.function
+        IntFunction<String> intToString = GAS_95_RATE -> Integer.toString(GAS_95_RATE);
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
         //Custom lambda1
@@ -175,6 +181,7 @@ public class Main {
         cSTrailers.washCar();
         printDiscount(cSTrailers);
         log.info("Hash Code" + cSTrailers.hashCode());
+        cSTrailers.hashCode();
         cSTrailers.kitchenChange(cSTrailers.isFridgeInStock());
 
 
