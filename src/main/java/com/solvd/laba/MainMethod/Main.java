@@ -168,7 +168,6 @@ public class Main {
                 .mapToInt(Integer::intValue)
                 .average()
                 .orElse(0.0);
-
         System.out.println("Average price of oils: " + avgPrice);
         printInfo(trailercar2);
         cSTrailers.waxCar();
@@ -177,40 +176,46 @@ public class Main {
         log.info("Hash Code" + cSTrailers.hashCode());
         cSTrailers.hashCode();
         cSTrailers.kitchenChange(cSTrailers.isFridgeInStock());
-
-
         log.info("Available lisence plates:");
         LicenseLinkedList<String> licensePlateString = new LicenseLinkedList<>();
         licensePlateString.add("plate");
-        licensePlateString.add("blate");
+        licensePlateString.add("blatev");
         licensePlateString.add("klate");
-        licensePlateString.add("mlaate");
+        licensePlateString.add("kmlaate");
         licensePlateString.remove(2);
         licensePlateString.printInfo();
         System.out.println(licensePlateString.size());
         System.out.println(licensePlateString.get(1));
-        //Stream2
+        //Stream 2
+        String concatenated = licensePlateString.stream().reduce("", (s1, s2) -> s1 + s2);
+        System.out.println("Concatenated all licence plates: " + concatenated);
+        //Stream3
         List<String> limited = licensePlateString.stream()
                 .limit(2)
                 .collect(Collectors.toList());
-        //Stream3
+        System.out.println("Limited list of  licence plates: " + limited);
+        //Stream4
         List<String> filteredLicensePlates = licensePlateString.stream()
                 .filter(name -> name.startsWith("k"))
                 .collect(Collectors.toList());
-        //Stream4
+        System.out.println("list of  licence plates starts with 'k': " + filteredLicensePlates);
+        //Stream5
         long count = licensePlateString.stream().count();
-
-
+        System.out.println("Count Number of list of  licence plates: " + count);
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
         licensePlateInteger.add(123456);
         licensePlateInteger.clear();
         licensePlateInteger.add(857576);
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
-        //Stream5
+        licensePlateInteger.printInfo();
+        //Stream6
         boolean containsNumber = licensePlateInteger.stream()
                 .anyMatch(s -> s.equals(284045));
-        licensePlateInteger.printInfo();
+        System.out.println("Is this list contains number 284045?:  " + containsNumber);
+        //Stream7
+        Optional<Integer> maxNumber = licensePlateInteger.stream().max(Integer::compareTo);
+        System.out.println("Max number of this list is:" + maxNumber);
         System.out.println("Is this empty list: " + licensePlateInteger.isEmpty());
         System.out.println(licensePlateInteger.contains(857576));
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();

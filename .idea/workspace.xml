@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new10">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Reflection/ReflectionMain.java" afterDir="false" />
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683860408145</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="new11">
+      <created>1684029997001</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684029997002</updated>
+    </task>
+    <task id="LOCAL-00029" summary="new12">
+      <created>1684030124001</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684030124002</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -258,7 +272,9 @@
     <MESSAGE value="new" />
     <MESSAGE value="new9" />
     <MESSAGE value="new10" />
-    <option name="LAST_COMMIT_MESSAGE" value="new10" />
+    <MESSAGE value="new11" />
+    <MESSAGE value="new12" />
+    <option name="LAST_COMMIT_MESSAGE" value="new12" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
