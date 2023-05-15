@@ -45,6 +45,10 @@ public class Main {
         log.info("Clients:");
         clientTruck.printInfo();
         clientTruck.leaveGoodFeedback();
+        Scanner scanner = new Scanner(System.in);
+        clientTruck.showStatus(scanner);
+        clientTruck.showMembershipLevel(scanner);
+        clientTruck.choosePaymentMethod(scanner);
         Manager managerTruck = new Manager("Bill Dylan", "Manager", "678 Bud street", 1, 0);
         Mechanic mechanicTruck = new Mechanic("Bob Bronson", "Mechanic", "55 Found ave", 33, 1);
         Boss bossTruck = new Boss("Phill Dumphy", "Boss", "77 Grass ave", 3);
@@ -173,7 +177,7 @@ public class Main {
         cSTrailers.waxCar();
         cSTrailers.washCar();
         printDiscount(cSTrailers);
-        log.info("Hash Code" + cSTrailers.hashCode());
+        log.info("Hash Code: " + cSTrailers.hashCode());
         cSTrailers.hashCode();
         cSTrailers.kitchenChange(cSTrailers.isFridgeInStock());
         log.info("Available lisence plates:");

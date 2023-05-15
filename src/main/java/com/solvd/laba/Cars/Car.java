@@ -16,7 +16,7 @@ public class Car implements IPrintInfo {
         put("PENNZOIL", 300);
         put("MOBIL", 100);
     }};
-    private Set<String> serviceType = new TreeSet<>(Arrays.asList("Oil change", "Tire rotation",
+    private Set<String> serviceType = new TreeSet<>(Arrays.asList("Wheels change", "Tire rotation",
             "Light change", "Air Filter change"));
 
     public enum Color {

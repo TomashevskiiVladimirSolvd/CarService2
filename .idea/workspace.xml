@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new12">
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new13">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684030124002</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="new13">
+      <created>1684031330716</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1684031330716</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -274,7 +282,8 @@
     <MESSAGE value="new10" />
     <MESSAGE value="new11" />
     <MESSAGE value="new12" />
-    <option name="LAST_COMMIT_MESSAGE" value="new12" />
+    <MESSAGE value="new13" />
+    <option name="LAST_COMMIT_MESSAGE" value="new13" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
