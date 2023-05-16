@@ -8,8 +8,11 @@ import org.apache.log4j.Logger;
 
 public class Car implements IPrintInfo {
     Logger log = Logger.getLogger(Car.class);
-    private String make;
-    private String model;
+    protected String make;
+    protected String model;
+    protected int year;
+    protected int price;
+    protected boolean isAvailable;
     private Map<String, Integer> oils = new HashMap<>() {{
         put("PORCSHE", 400);
         put("CASTROL", 200);
@@ -32,9 +35,12 @@ public class Car implements IPrintInfo {
         WHITE
     }
 
-    public Car(String make, String model) {
+    public Car(String make, String model, int year, int price, boolean isAvailable) {
         this.make = make;
         this.model = model;
+        this.year = year;
+        this.price = price;
+        this.isAvailable = isAvailable;
     }
 
     public void printColorCode() {
@@ -144,9 +150,34 @@ public class Car implements IPrintInfo {
         this.model = model;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
     @Override
     public void printInfo() {
-        log.info("Make: " + getMake() + " Model: " + getModel());
+        log.info("Make: " + getMake() + " Model: " + getModel() + " Year: " + getYear() + " Price: "
+                + getPrice() + " Is available: " + isAvailable());
     }
 
 

@@ -77,8 +77,8 @@ public class Main {
         printInfo(bossTruck);
         work(bossTruck);
         bossTruck.countSalary();
-        Car truckcar1 = new Car("Volvo", "VNL300");
-        Car truckcar2 = new Car("Volvo", "VNL400");
+        Car truckcar1 = new Car("Volvo", "VNL300", 1990, 7600, true);
+        Car truckcar2 = new Car("Volvo", "VNL400", 1995, 8000, false);
         log.info("Cars:");
         printInfo(truckcar1);
         truckcar1.printColorCode();
@@ -132,8 +132,8 @@ public class Main {
             e.printStackTrace();
         }
 
-        Car usualcar1 = new Car("Toyota", "Corolla");
-        Car usualcar2 = new Car("Nissan", "Versa");
+        Car usualcar1 = new Car("Toyota", "Corolla", 2018, 13800, true);
+        Car usualcar2 = new Car("Nissan", "Versa", 2015, 9000, false);
         log.info("Cars:");
         printInfo(usualcar1);
         printInfo(usualcar2);
@@ -160,8 +160,8 @@ public class Main {
         printInfo(trailerBoss);
         work(trailerBoss);
         trailerBoss.countSalary();
-        Car trailercar1 = new Car("RAM", "Roadtrek Zion");
-        Car trailercar2 = new Car("Ford", "Chateau");
+        Car trailercar1 = new Car("RAM", "Roadtrek Zion", 2007, 30000, true);
+        Car trailercar2 = new Car("Ford", "Chateau", 2009, 35000, false);
         log.info("Cars:");
         printInfo(trailercar1);
         trailercar1.chooseServiceType();
