@@ -32,6 +32,8 @@ public class Main {
         log.info("The rate of gas-95 is: " + gas95Rate);
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
+        CarService.incrementBannerCount();
+        CarService.incrementBannerCount();
         //Custom lambda1
         ICheck iCheckContains = (str1, str2) -> str1.contains(str2);
         System.out.println(iCheckContains.check(cSTrucks.getName(), "Truck"));

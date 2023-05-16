@@ -13,6 +13,18 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 public abstract class CarService implements ICarService {
+    private static int bannerCount;
+
+    static {
+        bannerCount = 0;
+        System.out.println("Banner count is 0 for now.");
+    }
+
+    public static void incrementBannerCount() {
+        bannerCount++;
+        System.out.println("Banner count incremented. Total banners: " + bannerCount);
+    }
+
     public enum DayOfWeek {
         MONDAY,
         TUESDAY,
