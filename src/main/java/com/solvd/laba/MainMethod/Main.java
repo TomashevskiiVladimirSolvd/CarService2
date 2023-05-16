@@ -1,5 +1,6 @@
 package com.solvd.laba.MainMethod;
 
+import FinalClass.DataBaseConfig;
 import com.solvd.laba.CarServices.CarService;
 import com.solvd.laba.Exceptions.*;
 import com.solvd.laba.Cars.Car;
@@ -230,6 +231,9 @@ public class Main {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
+        DataBaseConfig dataBaseConfig = new DataBaseConfig("jdbc:mysql://localhost:3507/Bigdb", 200);
+        dataBaseConfig.printInfo();
 
         LogRead logRead = new LogRead();
         logRead.countUniqueWords("src/main/resources/countUniqueWords.txt");

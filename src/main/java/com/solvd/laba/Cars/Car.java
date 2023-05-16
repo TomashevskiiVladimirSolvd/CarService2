@@ -8,11 +8,11 @@ import org.apache.log4j.Logger;
 
 public class Car implements IPrintInfo {
     Logger log = Logger.getLogger(Car.class);
-    protected String make;
-    protected String model;
-    protected int year;
-    protected int price;
-    protected boolean isAvailable;
+    private String make;
+    private String model;
+    private int year;
+    private int price;
+    private boolean isAvailable;
     private Map<String, Integer> oils = new HashMap<>() {{
         put("PORCSHE", 400);
         put("CASTROL", 200);

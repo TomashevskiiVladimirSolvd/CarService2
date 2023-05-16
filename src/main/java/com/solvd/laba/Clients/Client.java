@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class Client implements IPrintInfo {
     Logger log = Logger.getLogger(Client.class);
-    private String name;
-    private String address;
-    private Status status;
-    private MembershipLevel membershipLevel;
-    private PaymentMethod paymentMethod;
+    protected String name;
+    protected String address;
+    protected Status status;
+    protected MembershipLevel membershipLevel;
+    protected PaymentMethod paymentMethod;
 
     public enum Status {
         ACTIVE,
@@ -85,19 +85,15 @@ public class Client implements IPrintInfo {
 
         switch (paymentMethod) {
             case CREDIT_CARD:
-                paymentMethod = PaymentMethod.CREDIT_CARD;
                 System.out.println("Your current payment method is: CREDIT_CARD");
                 break;
             case DEBIT_CARD:
-                paymentMethod = PaymentMethod.DEBIT_CARD;
                 System.out.println("Your current payment method is: DEBIT_CARD");
                 break;
             case PAYPAL:
-                paymentMethod = PaymentMethod.PAYPAL;
                 System.out.println("Your current payment method is: PAYPAL");
                 break;
             case BANK_TRANSFER:
-                paymentMethod = PaymentMethod.BANK_TRANSFER;
                 System.out.println("Your current payment method is: BANK_TRANSFER");
                 break;
             default:
