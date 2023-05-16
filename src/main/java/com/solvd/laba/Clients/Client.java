@@ -1,8 +1,6 @@
 package com.solvd.laba.Clients;
 
-import com.solvd.laba.CarServices.CarServiceUsualCars;
 import com.solvd.laba.Interfaces.IPrintInfo;
-
 import org.apache.log4j.Logger;
 
 import java.util.Scanner;
@@ -35,37 +33,76 @@ public class Client implements IPrintInfo {
         BANK_TRANSFER
     }
 
-    public void showStatus(Scanner scanner) {
+    public static void showStatus(Scanner scanner) {
         System.out.print("Enter status (ACTIVE, INACTIVE, or PENDING): ");
         String statusString = scanner.nextLine().toUpperCase();
-        try {
-            Status status = Status.valueOf(statusString);
-            System.out.println("Your current Status is : " + status);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid input. Please enter a valid status.");
+        Status status = Status.valueOf(statusString.toUpperCase());
+
+        switch (status) {
+            case ACTIVE:
+                System.out.println("Your current status is: ACTIVE");
+                break;
+            case INACTIVE:
+                System.out.println("Your current status is: INACTIVE");
+                break;
+            case PENDING:
+                System.out.println("Your current status is: PENDING");
+                break;
+            default:
+                System.out.println("Invalid input. Please enter a valid status.");
+                break;
         }
     }
 
-    public void showMembershipLevel(Scanner scanner) {
+    public static void showMembershipLevel(Scanner scanner) {
         System.out.print("Enter membership level (BRONZE, SILVER, GOLD, or PLATINUM): ");
         String levelString = scanner.nextLine().toUpperCase();
-        try {
-            MembershipLevel level = MembershipLevel.valueOf(levelString);
-            System.out.println("Your current Membership Level: " + level);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid input. Please enter a valid membership level.");
+        MembershipLevel membershipLevel = MembershipLevel.valueOf(levelString.toUpperCase());
+
+        switch (membershipLevel) {
+            case BRONZE:
+                System.out.println("Your current membership level is: BRONZE");
+                break;
+            case SILVER:
+                System.out.println("Your current membership level is: SILVER");
+                break;
+            case GOLD:
+                System.out.println("Your current membership level is: GOLD");
+                break;
+            case PLATINUM:
+                System.out.println("Your current membership level is: PLATINUM");
+                break;
+            default:
+                System.out.println("Invalid input. Please enter a valid membership level.");
+                break;
         }
     }
 
-    public void choosePaymentMethod(Scanner scanner) {
+    public static void choosePaymentMethod(Scanner scanner) {
         System.out.print("Enter payment method (CREDIT_CARD, DEBIT_CARD, PAYPAL, or BANK_TRANSFER): ");
         String methodString = scanner.nextLine().toUpperCase();
-        try {
-            PaymentMethod method = PaymentMethod.valueOf(methodString);
-            this.paymentMethod = method;
-            System.out.println("Your current Payment method is : " + method);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid input. Please enter a valid payment method.");
+        PaymentMethod paymentMethod = PaymentMethod.valueOf(methodString.toUpperCase());
+
+        switch (paymentMethod) {
+            case CREDIT_CARD:
+                paymentMethod = PaymentMethod.CREDIT_CARD;
+                System.out.println("Your current payment method is: CREDIT_CARD");
+                break;
+            case DEBIT_CARD:
+                paymentMethod = PaymentMethod.DEBIT_CARD;
+                System.out.println("Your current payment method is: DEBIT_CARD");
+                break;
+            case PAYPAL:
+                paymentMethod = PaymentMethod.PAYPAL;
+                System.out.println("Your current payment method is: PAYPAL");
+                break;
+            case BANK_TRANSFER:
+                paymentMethod = PaymentMethod.BANK_TRANSFER;
+                System.out.println("Your current payment method is: BANK_TRANSFER");
+                break;
+            default:
+                System.out.println("Invalid input. Please enter a valid payment method.");
+                break;
         }
     }
 

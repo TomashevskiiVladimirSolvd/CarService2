@@ -99,20 +99,32 @@ public abstract class CarService implements ICarService {
     public static DayOfWeek chooseDay() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a day of the week (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY):");
-        String input = scanner.nextLine();
+        String input = scanner.nextLine().toUpperCase();
+
         try {
-            DayOfWeek day = DayOfWeek.valueOf(input.toUpperCase());
-            if (day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY) {
-                System.out.println("It's the weekend!");
-            } else {
-                System.out.println("It's a weekday.");
+            DayOfWeek day = DayOfWeek.valueOf(input);
+
+            switch (day) {
+                case MONDAY:
+                case TUESDAY:
+                case WEDNESDAY:
+                case THURSDAY:
+                case FRIDAY:
+                    System.out.println("It's a weekday.");
+                    break;
+                case SATURDAY:
+                case SUNDAY:
+                    System.out.println("It's the weekend!");
+                    break;
             }
+
             return day;
         } catch (IllegalArgumentException e) {
             System.out.println("Invalid day of the week. Please try again.");
             return chooseDay();
         }
     }
-
-
 }
+
+
+
