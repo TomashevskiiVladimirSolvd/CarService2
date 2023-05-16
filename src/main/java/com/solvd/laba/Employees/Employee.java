@@ -8,9 +8,9 @@ import org.apache.log4j.Logger;
 
 abstract public class Employee implements IWork, IPrintInfo {
     Logger log = Logger.getLogger(Employee.class.getName());
-    private String name;
-    private String position;
-    private String address;
+    protected String name;
+    protected String position;
+    protected String address;
 
     public Employee(String name, String position, String address) {
         this.name = name;

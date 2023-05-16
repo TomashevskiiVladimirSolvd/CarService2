@@ -23,8 +23,8 @@ public class CarServiceUsualCars extends CarService implements ICarTuning, IPrin
 
     @Override
     public void printInfo() {
-        log.info("Service name:" + getName() + " Address: " + getAddress()
-                + " Phone: " + getPhoneNumber() + " Spoilers In Stock: " + isSpoilerInStock);
+        log.info("Service name:" + name + " Address: " + address
+                + " Phone: " + phoneNumber + " Spoilers In Stock: " + isSpoilerInStock);
     }
 
     public void printDiscount() {
@@ -55,6 +55,5 @@ public class CarServiceUsualCars extends CarService implements ICarTuning, IPrin
     public void tintingWindows() {
         log.info("The tinting windows is done");
     }
-
 
 }

@@ -15,8 +15,8 @@ public class CarServiceTrailers extends CarService implements IDesignChanges, IP
 
     @Override
     public void printInfo() {
-        log.info("Service name:" + super.getName() + " Address: " + super.getAddress()
-                + " Phone: " + super.getPhoneNumber() + " Fridge In Stock: " + isFridgeInStock);
+        log.info("Service name:" + name + " Address: " + address
+                + " Phone: " + phoneNumber + " Fridge In Stock: " + isFridgeInStock);
     }
 
     public boolean isFridgeInStock() {

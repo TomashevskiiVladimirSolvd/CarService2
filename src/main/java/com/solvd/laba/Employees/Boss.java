@@ -30,8 +30,8 @@ public class Boss extends Employee {
 
     @Override
     public void printInfo() {
-        log.info("Name: " + getName() + " Position: " + getPosition() + " Address: "
-                + getAddress() + " Manage number: " + getManageNumber());
+        log.info("Name: " + name + " Position: " + position + " Address: "
+                + address + " Manage number: " + getManageNumber());
     }
 
     @Override

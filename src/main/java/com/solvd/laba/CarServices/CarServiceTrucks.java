@@ -31,8 +31,8 @@ public class CarServiceTrucks extends CarService implements IWeighting, IPrintIn
 
     @Override
     public void printInfo() {
-        log.info("Service name:" + getName() + " Address: " + getAddress()
-                + " Phone: " + getPhoneNumber() + " Weight Station: " + isWeightStationHere);
+        log.info("Service name:" + name + " Address: " + address
+                + " Phone: " + phoneNumber + " Weight Station: " + isWeightStationHere);
     }
 
     @Override

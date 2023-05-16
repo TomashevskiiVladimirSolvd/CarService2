@@ -7,7 +7,14 @@
     <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrailers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrailers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrucks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrucks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceUsualCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceUsualCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684205636783</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="new3">
+      <created>1684206758573</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1684206758575</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

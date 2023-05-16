@@ -44,8 +44,8 @@ public class Manager extends Employee {
 
     @Override
     public void printInfo() {
-        log.info("Name: " + getName() + " Position: " + getPosition() + " Address: "
-                + getAddress() + " Sales number:" + getSalesNumber());
+        log.info("Name: " + name + " Position: " + position + " Address: "
+                + address + " Sales number:" + getSalesNumber());
     }
 
 

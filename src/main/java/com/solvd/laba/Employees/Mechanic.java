@@ -35,8 +35,8 @@ public class Mechanic extends Employee {
 
     @Override
     public void printInfo() {
-        log.info("Name: " + getName() + " Position: " + getPosition() + " Address: "
-                + getAddress() + " Number of tools: " + getToolsNumber());
+        log.info("Name: " + name + " Position: " + position + " Address: "
+                + address + " Number of tools: " + getToolsNumber());
     }
 
     @Override

@@ -7,11 +7,16 @@ import java.util.Scanner;
 
 public class Client implements IPrintInfo {
     Logger log = Logger.getLogger(Client.class);
-    protected String name;
-    protected String address;
-    protected Status status;
-    protected MembershipLevel membershipLevel;
-    protected PaymentMethod paymentMethod;
+    private String name;
+    private String address;
+    private Status status;
+    private MembershipLevel membershipLevel;
+    private PaymentMethod paymentMethod;
+
+    public Client(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
     public enum Status {
         ACTIVE,
@@ -100,12 +105,6 @@ public class Client implements IPrintInfo {
                 System.out.println("Invalid input. Please enter a valid payment method.");
                 break;
         }
-    }
-
-
-    public Client(String name, String address) {
-        this.name = name;
-        this.address = address;
     }
 
     public String getName() {

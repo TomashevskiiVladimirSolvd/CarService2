@@ -13,16 +13,18 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 public abstract class CarService implements ICarService {
-    private static int bannerCount;
+    Logger log = Logger.getLogger(CarService.class.getName());
+    protected static int bannerCount;
+    protected String name;
+    protected String address;
+    protected long phoneNumber;
+    private List<Employee> employees = new ArrayList<>();
+    private List<Car> cars = new ArrayList<>();
+    private List<Client> clients = new ArrayList<>();
 
     static {
         bannerCount = 0;
         System.out.println("Banner count is 0 for now.");
-    }
-
-    public static void incrementBannerCount() {
-        bannerCount++;
-        System.out.println("Banner count incremented. Total banners: " + bannerCount);
     }
 
     public enum DayOfWeek {
@@ -35,19 +37,15 @@ public abstract class CarService implements ICarService {
         SUNDAY
     }
 
-    Logger log = Logger.getLogger(CarService.class.getName());
-    private String name;
-    private String address;
-
-    private long phoneNumber;
-    private List<Employee> employees = new ArrayList<>();
-    private List<Car> cars = new ArrayList<>();
-    private List<Client> clients = new ArrayList<>();
-
     public CarService(String name, String address, long phoneNumber) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+    }
+
+    public static void incrementBannerCount() {
+        bannerCount++;
+        System.out.println("Banner count incremented. Total banners: " + bannerCount);
     }
 
     public List<Car> getCars() {
