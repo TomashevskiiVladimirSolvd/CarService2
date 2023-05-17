@@ -3,6 +3,8 @@ package com.solvd.laba.Licenses;
 import com.solvd.laba.Interfaces.IPrintInfo;
 
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 
 public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
@@ -89,17 +91,22 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
         return curr.data;
     }
 
+    //lamdba from Supplier functional interface
     @Override
     public int hashCode() {
-        return Objects.hash(head, size);
+        Supplier<Integer> hashCodeSupplier = () -> Objects.hash(head, size);
+        return hashCodeSupplier.get();
     }
 
+    //lamdba from Predicate functional interface
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         LicenseLinkedList<?> that = (LicenseLinkedList<?>) o;
-        return size == that.size && Objects.equals(head, that.head);
+        Predicate<LicenseLinkedList<?>> isEqual = other ->
+                size == other.size && Objects.equals(head, other.head);
+        return isEqual.test(that);
     }
 
     @Override
@@ -116,24 +123,17 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
         return false;
     }
 
+    //lambda from Consumer functional interface
     @Override
     public boolean addAll(Collection<? extends T> c) {
-        for (T item : c) {
-            add(item);
-        }
+        c.forEach(this::add);
         return true;
     }
 
+    //lambda from Predicate functional interface
     @Override
     public boolean containsAll(Collection<?> c) {
-        Node curr = head;
-
-        while (curr != null) {
-            if (!contains(curr))
-                return false;
-            curr = curr.next;
-        }
-        return true;
+        return c.stream().allMatch(this::contains);
     }
 
     @Override
@@ -220,13 +220,14 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
             curr = curr.next;
         }
     }
-
+    //lamdba from Supplier functional interface
     @Override
     public String toString() {
-        return "LicenseLinkedList{" +
+        Supplier<String> toStringSupplier = () -> "LicenseLinkedList{" +
                 "head=" + head +
                 ", size=" + size +
                 '}';
+        return toStringSupplier.get();
     }
 
     @Override

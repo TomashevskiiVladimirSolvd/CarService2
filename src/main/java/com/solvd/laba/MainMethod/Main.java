@@ -118,7 +118,6 @@ public class Main {
         printInfo(usualMechanic);
         work(usualMechanic);
         usualMechanic.checkUpCar();
-        usualMechanic.fillFormOfBrokenTool();
         try {
             usualMechanic.fillFormOfBrokenTool();
         } catch (ToolException e) {

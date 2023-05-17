@@ -25,7 +25,6 @@ public abstract class CarService implements ICarService {
         System.out.println("Car Service count is 0 for now.");
     }
 
-
     public CarService(String name, String address, long phoneNumber) {
         this.name = name;
         this.address = address;
