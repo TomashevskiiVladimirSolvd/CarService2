@@ -31,6 +31,11 @@ public class Car implements IPrintInfo {
         this.isAvailable = isAvailable;
     }
 
+    //Stream1
+    public long getServiceTypeCount() {
+        return serviceType.stream().count();
+    }
+
     public static ColorEnum.Color printColorCode() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a color(RED GREEN BLUE YELLOW ORANGE PURPLE PINK BROWN BLACK WHITE): ");
@@ -79,35 +84,6 @@ public class Car implements IPrintInfo {
             return printColorCode();
         }
     }
-
-
-    public void chooseOil() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("We have oils: PORCSHE, CASTROL, PENNZOIL, MOBIL");
-        System.out.println("Enter the name of the oil you want:");
-        String input = scanner.nextLine().toUpperCase();
-
-        try {
-            System.out.println("The price of " + input + " is " + getPrice(input) + " dollars.");
-        } catch (IllegalArgumentException e) {
-            System.out.println("Sorry, we don't have " + input + " in stock.");
-            chooseOil();
-        }
-    }
-
-    private int getPrice(String oil) {
-        if (oil.equals("PORCSHE")) {
-            return 400;
-        } else if (oil.equals("CASTROL")) {
-            return 200;
-        } else if (oil.equals("PENNZOIL")) {
-            return 300;
-        } else if (oil.equals("MOBIL")) {
-            return 100;
-        }
-        return 0;
-    }
-
 
     public void chooseServiceType() {
         Scanner scanner = new Scanner(System.in);

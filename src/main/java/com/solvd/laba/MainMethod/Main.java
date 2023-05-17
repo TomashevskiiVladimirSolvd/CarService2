@@ -14,8 +14,8 @@ import com.solvd.laba.Employees.Mechanic;
 import com.solvd.laba.Interfaces.*;
 import com.solvd.laba.Licenses.LicenseLinkedList;
 import com.solvd.laba.LogRead;
+
 import java.util.*;
-import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
@@ -41,7 +41,6 @@ public class Main {
         iStringConsumer.printLength(cSTrucks.getName());
 
         Client clientTruck = new Client("Bill Monroe", "555 Dickson street");
-        //Clients
         clientTruck.printInfo();
         clientTruck.leaveGoodFeedback();
         clientTruck.showStatus();
@@ -50,7 +49,6 @@ public class Main {
         Manager managerTruck = new Manager("Bill Dylan", "Manager", "678 Bud street", 1, 0);
         Mechanic mechanicTruck = new Mechanic("Bob Bronson", "Mechanic", "55 Found ave", 33, 1);
         Boss bossTruck = new Boss("Phill Dumphy", "Boss", "77 Grass ave", 3);
-        //Employees:
         printInfo(managerTruck);
         work(managerTruck);
         managerTruck.talkToInsurance();
@@ -124,7 +122,6 @@ public class Main {
 
         Car usualcar1 = new Car("Toyota", "Corolla", 2018, 13800, true);
         Car usualcar2 = new Car("Nissan", "Versa", 2015, 9000, false);
-        log.info("Cars:");
         printInfo(usualcar1);
         printInfo(usualcar2);
         cSUsual.waxCar();
@@ -134,13 +131,11 @@ public class Main {
         cSUsual.installSpoilers(cSUsual.isSpoilerInStock());
         cSUsual.tintingWindows();
 
-        log.info("Car services for Trailers:");
         CarServiceTrailers cSTrailers = new CarServiceTrailers("TrailersGood", "333 Madison road", 43456788, false);
         printInfo(cSTrailers);
         Manager trailerManager = new Manager("William Norton", "Manager", "399 Zoom street", 3, 1);
         Mechanic trailerMechanic = new Mechanic("Ernest Hamim", "Mechanic", "90 Bound ave", 45, 2);
         Boss trailerBoss = new Boss("Lick Lock", "Boss", "454 Grant street", 4);
-        log.info("Employees:");
         printInfo(trailerManager);
         work(trailerManager);
         trailerManager.talkToInsurance();
@@ -152,11 +147,8 @@ public class Main {
         trailerBoss.countSalary();
         Car trailercar1 = new Car("RAM", "Roadtrek Zion", 2007, 30000, true);
         Car trailercar2 = new Car("Ford", "Chateau", 2009, 35000, false);
-        log.info("Cars:");
         printInfo(trailercar1);
         trailercar1.chooseServiceType();
-        trailercar1.chooseOil();
-        trailercar1.getPrice();
         printInfo(trailercar2);
         cSTrailers.waxCar();
         cSTrailers.washCar();
@@ -174,22 +166,6 @@ public class Main {
         licensePlateString.printInfo();
         System.out.println(licensePlateString.size());
         System.out.println(licensePlateString.get(1));
-        //Stream 1
-        String concatenated = licensePlateString.stream().reduce("", (s1, s2) -> s1 + s2);
-        System.out.println("Concatenated all licence plates: " + concatenated);
-        //Stream2
-        List<String> limited = licensePlateString.stream()
-                .limit(2)
-                .collect(Collectors.toList());
-        System.out.println("Limited list of  licence plates: " + limited);
-        //Stream3
-        List<String> filteredLicensePlates = licensePlateString.stream()
-                .filter(name -> name.startsWith("k"))
-                .collect(Collectors.toList());
-        System.out.println("list of  licence plates starts with 'k': " + filteredLicensePlates);
-        //Stream4
-        long count = licensePlateString.stream().count();
-        System.out.println("Count Number of list of  licence plates: " + count);
         LicenseLinkedList<Integer> licensePlateInteger = new LicenseLinkedList<>();
         licensePlateInteger.add(123456);
         licensePlateInteger.clear();
@@ -197,16 +173,6 @@ public class Main {
         licensePlateInteger.add(284045);
         licensePlateInteger.add(285445);
         licensePlateInteger.printInfo();
-        //Stream5
-        boolean containsNumber = licensePlateInteger.stream()
-                .anyMatch(s -> s.equals(284045));
-        System.out.println("Is this list contains number 284045?:  " + containsNumber);
-        //Stream6
-        Optional<Integer> maxNumber = licensePlateInteger.stream().max(Integer::compareTo);
-        System.out.println("Max number of this list is:" + maxNumber);
-        //Stream7
-        Optional<Integer> minNumber = licensePlateInteger.stream().min(Integer::compareTo);
-        System.out.println("Min number of this list is:" + minNumber);
         System.out.println("Is this empty list: " + licensePlateInteger.isEmpty());
         System.out.println(licensePlateInteger.contains(857576));
         LicenseLinkedList<Integer> licensePlateInteger2 = new LicenseLinkedList<>();
