@@ -23,16 +23,26 @@ public class Car implements IPrintInfo {
             "Light change", "Air Filter change"));
 
     public enum Color {
-        RED,
-        GREEN,
-        BLUE,
-        YELLOW,
-        ORANGE,
-        PURPLE,
-        PINK,
-        BROWN,
-        BLACK,
-        WHITE
+        RED("#FF0000"),
+        GREEN("#00FF00"),
+        BLUE("#0000FF"),
+        YELLOW("#FFFF00"),
+        ORANGE("#FFA500"),
+        PURPLE("#800080"),
+        PINK("#FFC0CB"),
+        BROWN("#A52A2A"),
+        BLACK("#000000"),
+        WHITE("#FFFFFF");
+
+        private final String colorCode;
+
+        Color(String colorCode) {
+            this.colorCode = colorCode;
+        }
+
+        public String getColorCode() {
+            return colorCode;
+        }
     }
 
     public Car(String make, String model, int year, int price, boolean isAvailable) {
@@ -53,34 +63,34 @@ public class Car implements IPrintInfo {
 
             switch (color) {
                 case RED:
-                    System.out.println("The color code for RED is #FF0000");
+                    System.out.println("The color code for RED is " + Color.RED.getColorCode());
                     break;
                 case GREEN:
-                    System.out.println("The color code for GREEN is #00FF00");
+                    System.out.println("The color code for GREEN is " + Color.GREEN.getColorCode());
                     break;
                 case BLUE:
-                    System.out.println("The color code for BLUE is #0000FF");
+                    System.out.println("The color code for BLUE is " + Color.BLUE.getColorCode());
                     break;
                 case YELLOW:
-                    System.out.println("The color code for YELLOW is #FFFF00");
+                    System.out.println("The color code for YELLOW is " + Color.YELLOW.getColorCode());
                     break;
                 case ORANGE:
-                    System.out.println("The color code for ORANGE is #FFA500");
+                    System.out.println("The color code for ORANGE is " + Color.ORANGE.getColorCode());
                     break;
                 case PURPLE:
-                    System.out.println("The color code for PURPLE is #800080");
+                    System.out.println("The color code for PURPLE is " + Color.PURPLE.getColorCode());
                     break;
                 case PINK:
-                    System.out.println("The color code for PINK is #FFC0CB");
+                    System.out.println("The color code for PINK is " + Color.PINK.getColorCode());
                     break;
                 case BROWN:
-                    System.out.println("The color code for BROWN is #A52A2A");
+                    System.out.println("The color code for BROWN is " + Color.BROWN.getColorCode());
                     break;
                 case BLACK:
-                    System.out.println("The color code for BLACK is #000000");
+                    System.out.println("The color code for BLACK is " + Color.BLACK.getColorCode());
                     break;
                 case WHITE:
-                    System.out.println("The color code for WHITE is #FFFFFF");
+                    System.out.println("The color code for WHITE is " + Color.WHITE.getColorCode());
                     break;
                 default:
                     System.out.println("Unknown color");
