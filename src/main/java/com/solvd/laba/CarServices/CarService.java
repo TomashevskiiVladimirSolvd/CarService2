@@ -1,6 +1,7 @@
 package com.solvd.laba.CarServices;
 
 import com.solvd.laba.Cars.Car;
+import com.solvd.laba.Enums.DayOfWeekEnum;
 import com.solvd.laba.Interfaces.ICarService;
 import com.solvd.laba.Clients.Client;
 import com.solvd.laba.Employees.Employee;
@@ -26,15 +27,6 @@ public abstract class CarService implements ICarService {
         System.out.println("Car Service count is 0 for now.");
     }
 
-    public enum DayOfWeek {
-        MONDAY,
-        TUESDAY,
-        WEDNESDAY,
-        THURSDAY,
-        FRIDAY,
-        SATURDAY,
-        SUNDAY
-    }
 
     public CarService(String name, String address, long phoneNumber) {
         this.name = name;
@@ -100,28 +92,16 @@ public abstract class CarService implements ICarService {
         return "Equals" + employees.equals(clients);
     }
 
-    public static DayOfWeek chooseDay() {
+    public static DayOfWeekEnum.DayOfWeek chooseDay() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a day of the week (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY):");
         String input = scanner.nextLine().toUpperCase();
 
         try {
-            DayOfWeek day = DayOfWeek.valueOf(input);
-
-            switch (day) {
-                case MONDAY:
-                case TUESDAY:
-                case WEDNESDAY:
-                case THURSDAY:
-                case FRIDAY:
-                    System.out.println("It's a weekday.");
-                    break;
-                case SATURDAY:
-                case SUNDAY:
-                    System.out.println("It's the weekend!");
-                    break;
-            }
-
+            DayOfWeekEnum.DayOfWeek day = DayOfWeekEnum.DayOfWeek.valueOf(input);
+            System.out.println("Name: " + day.getName());
+            System.out.println("Option Number: " + day.getOptionNumber());
+            System.out.println("Description: " + day.getDescription());
             return day;
         } catch (IllegalArgumentException e) {
             System.out.println("Invalid day of the week. Please try again.");

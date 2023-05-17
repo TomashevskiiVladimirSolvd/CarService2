@@ -1,4 +1,4 @@
-package FinalClass;
+package com.solvd.laba.FinalClass;
 
 import com.solvd.laba.Interfaces.IPrintInfo;
 
