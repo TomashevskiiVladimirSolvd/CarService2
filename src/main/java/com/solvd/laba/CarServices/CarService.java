@@ -1,7 +1,6 @@
 package com.solvd.laba.CarServices;
 
 import com.solvd.laba.Cars.Car;
-import com.solvd.laba.Enums.DayOfWeekEnum;
 import com.solvd.laba.Interfaces.ICarService;
 import com.solvd.laba.Clients.Client;
 import com.solvd.laba.Employees.Employee;
@@ -9,7 +8,6 @@ import com.solvd.laba.Employees.Employee;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
@@ -92,22 +90,6 @@ public abstract class CarService implements ICarService {
         return "Equals" + employees.equals(clients);
     }
 
-    public static DayOfWeekEnum.DayOfWeek chooseDay() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a day of the week (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY):");
-        String input = scanner.nextLine().toUpperCase();
-
-        try {
-            DayOfWeekEnum.DayOfWeek day = DayOfWeekEnum.DayOfWeek.valueOf(input);
-            System.out.println("Name: " + day.getName());
-            System.out.println("Option Number: " + day.getOptionNumber());
-            System.out.println("Description: " + day.getDescription());
-            return day;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid day of the week. Please try again.");
-            return chooseDay();
-        }
-    }
 }
 
 

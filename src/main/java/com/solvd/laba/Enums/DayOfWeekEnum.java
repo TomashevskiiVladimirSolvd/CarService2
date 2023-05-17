@@ -1,5 +1,7 @@
 package com.solvd.laba.Enums;
 
+import java.util.Scanner;
+
 public class DayOfWeekEnum {
     public enum DayOfWeek {
         MONDAY("Monday", 1, "First day of the week"),
@@ -30,6 +32,23 @@ public class DayOfWeekEnum {
 
         public String getDescription() {
             return description;
+        }
+    }
+
+    public static DayOfWeek chooseDay() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a day of the week (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY):");
+        String input = scanner.nextLine().toUpperCase();
+
+        try {
+            DayOfWeek day = DayOfWeek.valueOf(input);
+            System.out.println("Name: " + day.getName());
+            System.out.println("Option Number: " + day.getOptionNumber());
+            System.out.println("Description: " + day.getDescription());
+            return day;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid day of the week. Please try again.");
+            return chooseDay();
         }
     }
 }

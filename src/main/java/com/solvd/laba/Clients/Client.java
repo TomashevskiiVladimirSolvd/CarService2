@@ -1,5 +1,8 @@
 package com.solvd.laba.Clients;
 
+import com.solvd.laba.Enums.MembershipLevelEnum;
+import com.solvd.laba.Enums.PaymentMethodEnum;
+import com.solvd.laba.Enums.StatusEnum;
 import com.solvd.laba.Interfaces.IPrintInfo;
 import org.apache.log4j.Logger;
 
@@ -9,42 +12,19 @@ public class Client implements IPrintInfo {
     Logger log = Logger.getLogger(Client.class);
     private String name;
     private String address;
-    private Status status;
-    private MembershipLevel membershipLevel;
-    private PaymentMethod paymentMethod;
 
     public Client(String name, String address) {
         this.name = name;
         this.address = address;
     }
 
-    public enum Status {
-        ACTIVE,
-        INACTIVE,
-        PENDING
-    }
-
-    public enum MembershipLevel {
-        BRONZE,
-        SILVER,
-        GOLD,
-        PLATINUM
-    }
-
-    public enum PaymentMethod {
-        CREDIT_CARD,
-        DEBIT_CARD,
-        PAYPAL,
-        BANK_TRANSFER
-    }
-
-    public static Status showStatus() {
+    public static StatusEnum.Status showStatus() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter status (ACTIVE, INACTIVE, or PENDING): ");
         String statusString = scanner.nextLine().toUpperCase();
 
         try {
-            Status status = Status.valueOf(statusString);
+            StatusEnum.Status status = StatusEnum.Status.valueOf(statusString);
 
             switch (status) {
                 case ACTIVE:
@@ -68,13 +48,13 @@ public class Client implements IPrintInfo {
     }
 
 
-    public static MembershipLevel showMembershipLevel() {
+    public static MembershipLevelEnum.MembershipLevel showMembershipLevel() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter membership level (BRONZE, SILVER, GOLD, or PLATINUM): ");
         String levelString = scanner.nextLine().toUpperCase();
 
         try {
-            MembershipLevel membershipLevel = MembershipLevel.valueOf(levelString);
+            MembershipLevelEnum.MembershipLevel membershipLevel = MembershipLevelEnum.MembershipLevel.valueOf(levelString);
 
             switch (membershipLevel) {
                 case BRONZE:
@@ -102,13 +82,13 @@ public class Client implements IPrintInfo {
     }
 
 
-    public static PaymentMethod choosePaymentMethod() {
+    public static PaymentMethodEnum.PaymentMethod choosePaymentMethod() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter payment method (CREDIT_CARD, DEBIT_CARD, PAYPAL, or BANK_TRANSFER): ");
         String methodString = scanner.nextLine().toUpperCase();
 
         try {
-            PaymentMethod paymentMethod = PaymentMethod.valueOf(methodString);
+            PaymentMethodEnum.PaymentMethod paymentMethod = PaymentMethodEnum.PaymentMethod.valueOf(methodString);
 
             switch (paymentMethod) {
                 case CREDIT_CARD:

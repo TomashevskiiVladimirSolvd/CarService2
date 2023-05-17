@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new6">
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new8">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/ColorEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/MembershipLevelEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/PaymentMethodEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/StatusEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalClass/DataBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/FinalClass/DataBaseConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/DayOfWeekEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/DayOfWeekEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
     </list>
@@ -321,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684292780218</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="new7">
+      <created>1684294497944</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1684294497944</updated>
+    </task>
+    <task id="LOCAL-00040" summary="new8">
+      <created>1684294554360</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1684294554360</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -344,7 +363,9 @@
     <MESSAGE value="new4" />
     <MESSAGE value="new5" />
     <MESSAGE value="new6" />
-    <option name="LAST_COMMIT_MESSAGE" value="new6" />
+    <MESSAGE value="new7" />
+    <MESSAGE value="new8" />
+    <option name="LAST_COMMIT_MESSAGE" value="new8" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

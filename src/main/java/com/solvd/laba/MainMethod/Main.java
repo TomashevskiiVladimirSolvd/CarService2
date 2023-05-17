@@ -1,5 +1,6 @@
 package com.solvd.laba.MainMethod;
 
+import com.solvd.laba.Enums.DayOfWeekEnum;
 import com.solvd.laba.FinalClass.DataBaseConfig;
 import com.solvd.laba.CarServices.CarService;
 import com.solvd.laba.Exceptions.*;
@@ -27,7 +28,7 @@ public class Main {
 
     public static void main(String[] args) {
         Logger log = Logger.getLogger(Main.class);
-        CarService.chooseDay();
+        DayOfWeekEnum.chooseDay();
         double gas95Rate = GAS_95_RATE;
         log.info("The rate of gas-95 is: " + gas95Rate);
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);

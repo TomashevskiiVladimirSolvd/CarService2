@@ -1,5 +1,6 @@
 package com.solvd.laba.Cars;
 
+import com.solvd.laba.Enums.ColorEnum;
 import com.solvd.laba.Interfaces.IPrintInfo;
 
 import java.util.*;
@@ -22,29 +23,6 @@ public class Car implements IPrintInfo {
     private TreeSet<String> serviceType = new TreeSet<>(Arrays.asList("Wheels change", "Tire rotation",
             "Light change", "Air Filter change"));
 
-    public enum Color {
-        RED("#FF0000"),
-        GREEN("#00FF00"),
-        BLUE("#0000FF"),
-        YELLOW("#FFFF00"),
-        ORANGE("#FFA500"),
-        PURPLE("#800080"),
-        PINK("#FFC0CB"),
-        BROWN("#A52A2A"),
-        BLACK("#000000"),
-        WHITE("#FFFFFF");
-
-        private final String colorCode;
-
-        Color(String colorCode) {
-            this.colorCode = colorCode;
-        }
-
-        public String getColorCode() {
-            return colorCode;
-        }
-    }
-
     public Car(String make, String model, int year, int price, boolean isAvailable) {
         this.make = make;
         this.model = model;
@@ -53,44 +31,44 @@ public class Car implements IPrintInfo {
         this.isAvailable = isAvailable;
     }
 
-    public static Color printColorCode() {
+    public static ColorEnum.Color printColorCode() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a color(RED GREEN BLUE YELLOW ORANGE PURPLE PINK BROWN BLACK WHITE): ");
         String colorInput = scanner.nextLine();
 
         try {
-            Color color = Color.valueOf(colorInput.toUpperCase());
+            ColorEnum.Color color = ColorEnum.Color.valueOf(colorInput.toUpperCase());
 
             switch (color) {
                 case RED:
-                    System.out.println("The color code for RED is " + Color.RED.getColorCode());
+                    System.out.println("The color code for RED is " + ColorEnum.Color.RED.getColorCode());
                     break;
                 case GREEN:
-                    System.out.println("The color code for GREEN is " + Color.GREEN.getColorCode());
+                    System.out.println("The color code for GREEN is " + ColorEnum.Color.GREEN.getColorCode());
                     break;
                 case BLUE:
-                    System.out.println("The color code for BLUE is " + Color.BLUE.getColorCode());
+                    System.out.println("The color code for BLUE is " + ColorEnum.Color.BLUE.getColorCode());
                     break;
                 case YELLOW:
-                    System.out.println("The color code for YELLOW is " + Color.YELLOW.getColorCode());
+                    System.out.println("The color code for YELLOW is " + ColorEnum.Color.YELLOW.getColorCode());
                     break;
                 case ORANGE:
-                    System.out.println("The color code for ORANGE is " + Color.ORANGE.getColorCode());
+                    System.out.println("The color code for ORANGE is " + ColorEnum.Color.ORANGE.getColorCode());
                     break;
                 case PURPLE:
-                    System.out.println("The color code for PURPLE is " + Color.PURPLE.getColorCode());
+                    System.out.println("The color code for PURPLE is " + ColorEnum.Color.PURPLE.getColorCode());
                     break;
                 case PINK:
-                    System.out.println("The color code for PINK is " + Color.PINK.getColorCode());
+                    System.out.println("The color code for PINK is " + ColorEnum.Color.PINK.getColorCode());
                     break;
                 case BROWN:
-                    System.out.println("The color code for BROWN is " + Color.BROWN.getColorCode());
+                    System.out.println("The color code for BROWN is " + ColorEnum.Color.BROWN.getColorCode());
                     break;
                 case BLACK:
-                    System.out.println("The color code for BLACK is " + Color.BLACK.getColorCode());
+                    System.out.println("The color code for BLACK is " + ColorEnum.Color.BLACK.getColorCode());
                     break;
                 case WHITE:
-                    System.out.println("The color code for WHITE is " + Color.WHITE.getColorCode());
+                    System.out.println("The color code for WHITE is " + ColorEnum.Color.WHITE.getColorCode());
                     break;
                 default:
                     System.out.println("Unknown color");
