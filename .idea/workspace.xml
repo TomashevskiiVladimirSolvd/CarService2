@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new8">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/ColorEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/MembershipLevelEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/PaymentMethodEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/StatusEnum.java" afterDir="false" />
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/DayOfWeekEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Enums/DayOfWeekEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -340,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684294554360</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="new9">
+      <created>1684295426325</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1684295426325</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -351,7 +351,6 @@
     <MESSAGE value="update" />
     <MESSAGE value="NEW" />
     <MESSAGE value="newest" />
-    <MESSAGE value="new9" />
     <MESSAGE value="new10" />
     <MESSAGE value="new11" />
     <MESSAGE value="new12" />
@@ -365,7 +364,8 @@
     <MESSAGE value="new6" />
     <MESSAGE value="new7" />
     <MESSAGE value="new8" />
-    <option name="LAST_COMMIT_MESSAGE" value="new8" />
+    <MESSAGE value="new9" />
+    <option name="LAST_COMMIT_MESSAGE" value="new9" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -14,11 +14,11 @@ public class Car implements IPrintInfo {
     private int year;
     private int price;
     private boolean isAvailable;
-    private Map<String, Integer> oils = new HashMap<>() {{
-        put("PORCSHE", 400);
-        put("CASTROL", 200);
-        put("PENNZOIL", 300);
-        put("MOBIL", 100);
+    private List<String> oils = new ArrayList<>() {{
+        add("PORCSHE");
+        add("CASTROL");
+        add("PENNZOIL");
+        add("MOBIL");
     }};
     private TreeSet<String> serviceType = new TreeSet<>(Arrays.asList("Wheels change", "Tire rotation",
             "Light change", "Air Filter change"));
@@ -81,17 +81,31 @@ public class Car implements IPrintInfo {
     }
 
 
-    public void chooseOilAndTellPrice(Map<String, Integer> oils) {
+    public void chooseOil() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("We have oils:PORCSHE,CASTROL,PENNZOIL,MOBIL");
+        System.out.println("We have oils: PORCSHE, CASTROL, PENNZOIL, MOBIL");
         System.out.println("Enter the name of the oil you want:");
         String input = scanner.nextLine().toUpperCase();
-        if (oils.containsKey(input)) {
-            int price = oils.get(input);
-            System.out.println("The price of " + input + " is " + price + " dollars.");
-        } else {
+
+        try {
+            System.out.println("The price of " + input + " is " + getPrice(input) + " dollars.");
+        } catch (IllegalArgumentException e) {
             System.out.println("Sorry, we don't have " + input + " in stock.");
+            chooseOil();
         }
+    }
+
+    private int getPrice(String oil) {
+        if (oil.equals("PORCSHE")) {
+            return 400;
+        } else if (oil.equals("CASTROL")) {
+            return 200;
+        } else if (oil.equals("PENNZOIL")) {
+            return 300;
+        } else if (oil.equals("MOBIL")) {
+            return 100;
+        }
+        return 0;
     }
 
 
@@ -132,12 +146,11 @@ public class Car implements IPrintInfo {
         }
     }
 
-
-    public Map<String, Integer> getOils() {
+    public List<String> getOils() {
         return oils;
     }
 
-    public void setOils(Map<String, Integer> oils) {
+    public void setOils(List<String> oils) {
         this.oils = oils;
     }
 
