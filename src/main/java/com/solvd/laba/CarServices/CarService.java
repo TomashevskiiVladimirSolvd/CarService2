@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 
 public abstract class CarService implements ICarService {
     Logger log = Logger.getLogger(CarService.class.getName());
-    protected static int bannerCount;
+    protected static int carServiceCount = 0;
     protected String name;
     protected String address;
     protected long phoneNumber;
@@ -23,8 +23,7 @@ public abstract class CarService implements ICarService {
     private List<Client> clients = new ArrayList<>();
 
     static {
-        bannerCount = 0;
-        System.out.println("Banner count is 0 for now.");
+        System.out.println("Car Service count is 0 for now.");
     }
 
     public enum DayOfWeek {
@@ -41,11 +40,6 @@ public abstract class CarService implements ICarService {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
-    }
-
-    public static void incrementBannerCount() {
-        bannerCount++;
-        System.out.println("Banner count incremented. Total banners: " + bannerCount);
     }
 
     public List<Car> getCars() {

@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new3">
+    <list default="true" id="fa138a1d-363b-4b51-9a24-447f5195c2fd" name="Changes" comment="new4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrailers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrailers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrucks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceTrucks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceUsualCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/CarServices/CarServiceUsualCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Cars/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Clients/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/Employees/Mechanic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/LogRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/LogRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/laba/MainMethod/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684206758575</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="new4">
+      <created>1684256523866</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1684256523868</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -315,7 +321,6 @@
     <MESSAGE value="last" />
     <MESSAGE value="update" />
     <MESSAGE value="NEW" />
-    <MESSAGE value="new4" />
     <MESSAGE value="newest" />
     <MESSAGE value="new9" />
     <MESSAGE value="new10" />
@@ -326,7 +331,8 @@
     <MESSAGE value="new1" />
     <MESSAGE value="new2" />
     <MESSAGE value="new3" />
-    <option name="LAST_COMMIT_MESSAGE" value="new3" />
+    <MESSAGE value="new4" />
+    <option name="LAST_COMMIT_MESSAGE" value="new4" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

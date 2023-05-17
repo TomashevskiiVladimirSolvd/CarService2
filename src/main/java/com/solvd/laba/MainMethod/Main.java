@@ -32,8 +32,6 @@ public class Main {
         log.info("The rate of gas-95 is: " + gas95Rate);
         CarServiceTrucks cSTrucks = new CarServiceTrucks("TruckFix", " 14th ave", 98766543, false);
         printInfo(cSTrucks);
-        CarService.incrementBannerCount();
-        CarService.incrementBannerCount();
         //Custom lambda1
         ICheck iCheckContains = (str1, str2) -> str1.contains(str2);
         System.out.println(iCheckContains.check(cSTrucks.getName(), "Truck"));
@@ -48,10 +46,9 @@ public class Main {
         log.info("Clients:");
         clientTruck.printInfo();
         clientTruck.leaveGoodFeedback();
-        Scanner scanner = new Scanner(System.in);
-        clientTruck.showStatus(scanner);
-        clientTruck.showMembershipLevel(scanner);
-        clientTruck.choosePaymentMethod(scanner);
+        clientTruck.showStatus();
+        clientTruck.showMembershipLevel();
+        clientTruck.choosePaymentMethod();
         Manager managerTruck = new Manager("Bill Dylan", "Manager", "678 Bud street", 1, 0);
         Mechanic mechanicTruck = new Mechanic("Bob Bronson", "Mechanic", "55 Found ave", 33, 1);
         Boss bossTruck = new Boss("Phill Dumphy", "Boss", "77 Grass ave", 3);

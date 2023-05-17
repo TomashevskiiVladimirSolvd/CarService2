@@ -19,7 +19,7 @@ public class Car implements IPrintInfo {
         put("PENNZOIL", 300);
         put("MOBIL", 100);
     }};
-    private Set<String> serviceType = new TreeSet<>(Arrays.asList("Wheels change", "Tire rotation",
+    private TreeSet<String> serviceType = new TreeSet<>(Arrays.asList("Wheels change", "Tire rotation",
             "Light change", "Air Filter change"));
 
     public enum Color {
@@ -43,49 +43,55 @@ public class Car implements IPrintInfo {
         this.isAvailable = isAvailable;
     }
 
-    public void printColorCode() {
+    public static Color printColorCode() {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter a color(RED GREEN BLUE YELLOW ORANGE PURPLE PINK BROWN BLACK WHITE): ");
         String colorInput = scanner.nextLine();
 
-        Color color = Color.valueOf(colorInput.toUpperCase());
+        try {
+            Color color = Color.valueOf(colorInput.toUpperCase());
 
-        switch (color) {
-            case RED:
-                System.out.println("The color code for RED is #FF0000");
-                break;
-            case GREEN:
-                System.out.println("The color code for GREEN is #00FF00");
-                break;
-            case BLUE:
-                System.out.println("The color code for BLUE is #0000FF");
-                break;
-            case YELLOW:
-                System.out.println("The color code for YELLOW is #FFFF00");
-                break;
-            case ORANGE:
-                System.out.println("The color code for ORANGE is #FFA500");
-                break;
-            case PURPLE:
-                System.out.println("The color code for PURPLE is #800080");
-                break;
-            case PINK:
-                System.out.println("The color code for PINK is #FFC0CB");
-                break;
-            case BROWN:
-                System.out.println("The color code for BROWN is #A52A2A");
-                break;
-            case BLACK:
-                System.out.println("The color code for BLACK is #000000");
-                break;
-            case WHITE:
-                System.out.println("The color code for WHITE is #FFFFFF");
-                break;
-            default:
-                System.out.println("Unknown color");
+            switch (color) {
+                case RED:
+                    System.out.println("The color code for RED is #FF0000");
+                    break;
+                case GREEN:
+                    System.out.println("The color code for GREEN is #00FF00");
+                    break;
+                case BLUE:
+                    System.out.println("The color code for BLUE is #0000FF");
+                    break;
+                case YELLOW:
+                    System.out.println("The color code for YELLOW is #FFFF00");
+                    break;
+                case ORANGE:
+                    System.out.println("The color code for ORANGE is #FFA500");
+                    break;
+                case PURPLE:
+                    System.out.println("The color code for PURPLE is #800080");
+                    break;
+                case PINK:
+                    System.out.println("The color code for PINK is #FFC0CB");
+                    break;
+                case BROWN:
+                    System.out.println("The color code for BROWN is #A52A2A");
+                    break;
+                case BLACK:
+                    System.out.println("The color code for BLACK is #000000");
+                    break;
+                case WHITE:
+                    System.out.println("The color code for WHITE is #FFFFFF");
+                    break;
+                default:
+                    System.out.println("Unknown color");
+            }
+            return color;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid color input. Please enter a valid color.");
+            return printColorCode();
         }
     }
+
 
     public void chooseOilAndTellPrice(Map<String, Integer> oils) {
         Scanner scanner = new Scanner(System.in);
@@ -100,23 +106,44 @@ public class Car implements IPrintInfo {
         }
     }
 
-    public String chooseServiceType() {
+
+    public void chooseServiceType() {
         Scanner scanner = new Scanner(System.in);
-        log.info("Please choose a maintenance task from the following options:");
-        int i = 1;
-        for (String maintenanceTask : getServiceType()) {
-            log.info(i + ". " + maintenanceTask);
-            i++;
+
+        try {
+            System.out.println("Please choose a maintenance task from the following options:");
+            int i = 1;
+            for (String task : serviceType) {
+                System.out.println(i + ". " + task);
+                i++;
+            }
+
+            int choice;
+            do {
+                System.out.print("Enter your choice: ");
+                choice = scanner.nextInt();
+                if (choice < 1 || choice > serviceType.size()) {
+                    System.out.println("Invalid choice. Please try again.");
+                }
+            } while (choice < 1 || choice > serviceType.size());
+
+            String selectedTask = null;
+            i = 1;
+            for (String task : serviceType) {
+                if (i == choice) {
+                    selectedTask = task;
+                    break;
+                }
+                i++;
+            }
+
+            System.out.println("You have selected: " + selectedTask);
+        } catch (Exception e) {
+            System.out.println("An error occurred. Please try again.");
+            chooseServiceType();
         }
-        int choice = scanner.nextInt();
-        if (choice < 1 || choice > getServiceType().size()) {
-            log.info("Invalid choice. Please try again.");
-            return chooseServiceType();
-        }
-        String selectedTask = (String) getServiceType().toArray()[choice - 1];
-        log.info("You have selected: " + selectedTask);
-        return selectedTask;
     }
+
 
     public Map<String, Integer> getOils() {
         return oils;
@@ -126,11 +153,11 @@ public class Car implements IPrintInfo {
         this.oils = oils;
     }
 
-    public Set<String> getServiceType() {
+    public TreeSet<String> getServiceType() {
         return serviceType;
     }
 
-    public void setServiceType(Set<String> serviceType) {
+    public void setServiceType(TreeSet<String> serviceType) {
         this.serviceType = serviceType;
     }
 

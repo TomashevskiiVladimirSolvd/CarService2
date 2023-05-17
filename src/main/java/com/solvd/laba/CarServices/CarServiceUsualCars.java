@@ -11,6 +11,8 @@ public class CarServiceUsualCars extends CarService implements ICarTuning, IPrin
     public CarServiceUsualCars(String name, String address, long phoneNumber, boolean isSpoilerInStock) {
         super(name, address, phoneNumber);
         this.isSpoilerInStock = isSpoilerInStock;
+        carServiceCount++;
+        System.out.println("Car service count incremented. Total car services: " + carServiceCount);
     }
 
     public boolean isSpoilerInStock() {

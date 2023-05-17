@@ -13,6 +13,8 @@ public class CarServiceTrucks extends CarService implements IWeighting, IPrintIn
     public CarServiceTrucks(String name, String address, long phoneNumber, boolean isWeightStationHere) {
         super(name, address, phoneNumber);
         this.isWeightStationHere = isWeightStationHere;
+        carServiceCount++;
+        System.out.println("Car service count incremented. Total car services: " + carServiceCount);
 
     }
 

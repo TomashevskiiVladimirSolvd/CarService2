@@ -11,6 +11,8 @@ public class CarServiceTrailers extends CarService implements IDesignChanges, IP
     public CarServiceTrailers(String name, String address, long phoneNumber, boolean isFridgeInStock) {
         super(name, address, phoneNumber);
         this.isFridgeInStock = isFridgeInStock;
+        carServiceCount++;
+        System.out.println("Car service count incremented. Total car services: " + carServiceCount);
     }
 
     @Override
