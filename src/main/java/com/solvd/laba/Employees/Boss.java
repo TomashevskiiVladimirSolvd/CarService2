@@ -1,9 +1,5 @@
 package com.solvd.laba.Employees;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 import com.solvd.laba.Exceptions.*;
 
 
@@ -47,18 +43,5 @@ public class Boss extends Employee {
             throw new BusinessException("You don't control your business.It is bad for your income.");
         }
     }
-
-    public String readDocumentFirstLine(String path) throws IOException {
-        FileReader fileReader = new FileReader(path);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        try {
-            return bufferedReader.readLine();
-        } finally {
-            bufferedReader.close();
-            fileReader.close();
-        }
-    }
-
-
 }
 

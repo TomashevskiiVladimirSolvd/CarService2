@@ -14,7 +14,6 @@ import com.solvd.laba.Employees.Mechanic;
 import com.solvd.laba.Interfaces.*;
 import com.solvd.laba.Licenses.LicenseLinkedList;
 import com.solvd.laba.LogRead;
-import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -42,7 +41,7 @@ public class Main {
         iStringConsumer.printLength(cSTrucks.getName());
 
         Client clientTruck = new Client("Bill Monroe", "555 Dickson street");
-        log.info("Clients:");
+        //Clients
         clientTruck.printInfo();
         clientTruck.leaveGoodFeedback();
         clientTruck.showStatus();
@@ -51,7 +50,7 @@ public class Main {
         Manager managerTruck = new Manager("Bill Dylan", "Manager", "678 Bud street", 1, 0);
         Mechanic mechanicTruck = new Mechanic("Bob Bronson", "Mechanic", "55 Found ave", 33, 1);
         Boss bossTruck = new Boss("Phill Dumphy", "Boss", "77 Grass ave", 3);
-        log.info("Employees:");
+        //Employees:
         printInfo(managerTruck);
         work(managerTruck);
         managerTruck.talkToInsurance();
@@ -64,7 +63,6 @@ public class Main {
         printInfo(mechanicTruck);
         work(mechanicTruck);
         mechanicTruck.checkUpCar();
-        mechanicTruck.useTheGloves();
         try {
             mechanicTruck.useTheGloves();
         } catch (GetDirtyException e) {
@@ -78,7 +76,6 @@ public class Main {
         bossTruck.countSalary();
         Car truckcar1 = new Car("Volvo", "VNL300", 1990, 7600, true);
         Car truckcar2 = new Car("Volvo", "VNL400", 1995, 8000, false);
-        log.info("Cars:");
         printInfo(truckcar1);
         truckcar1.printColorCode();
         printInfo(truckcar2);
@@ -122,12 +119,6 @@ public class Main {
             usualBoss.controlBusiness();
         } catch (BusinessException e) {
             log.info("You don't control your business.It is bad for your income.");
-            e.printStackTrace();
-        }
-        try {
-            usualBoss.readDocumentFirstLine("");
-        } catch (IOException e) {
-            log.info("No such file or directory");
             e.printStackTrace();
         }
 
