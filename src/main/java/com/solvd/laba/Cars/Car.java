@@ -4,6 +4,7 @@ import com.solvd.laba.Enums.ColorEnum;
 import com.solvd.laba.Interfaces.IPrintInfo;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
@@ -35,7 +36,30 @@ public class Car implements IPrintInfo {
     public long getServiceTypeCount() {
         return serviceType.stream().count();
     }
-
+    //Stream2
+    public boolean hasServiceType(String type) {
+        return serviceType.stream().anyMatch(t -> t.equalsIgnoreCase(type));
+    }
+    //Stream3
+    public List<String> getSortedServiceTypes() {
+        return serviceType.stream().sorted().collect(Collectors.toList());
+    }
+    //Stream4
+    public String getFirstServiceType() {
+        return serviceType.stream().findFirst().orElse(null);
+    }
+    //Stream5
+    public void removeOil(String oil) {
+        oils.removeIf(o -> o.equalsIgnoreCase(oil));
+    }
+    //Stream6
+    public String getOilWithLongestName() {
+        return oils.stream().max(Comparator.comparingInt(String::length)).orElse(null);
+    }
+    //Stream7
+    public boolean allOilsContainKeyword(String keyword) {
+        return oils.stream().allMatch(o -> o.toLowerCase().contains(keyword.toLowerCase()));
+    }
     public static ColorEnum.Color printColorCode() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a color(RED GREEN BLUE YELLOW ORANGE PURPLE PINK BROWN BLACK WHITE): ");
