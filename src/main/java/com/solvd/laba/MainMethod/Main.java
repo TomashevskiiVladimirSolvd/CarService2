@@ -75,23 +75,23 @@ public class Main {
         Car truckcar1 = new Car("Volvo", "VNL300", 1990, 7600, true);
         Car truckcar2 = new Car("Volvo", "VNL400", 1995, 8000, false);
         printInfo(truckcar1);
-        System.out.println("List of oils"+truckcar1.getOils());
+        System.out.println("List of oils" + truckcar1.getOils());
         long serviceCount = truckcar1.getServiceTypeCount();
-        log.info("Count of ServiceTypes: "+serviceCount);
-        boolean isHasServiceType=truckcar1.hasServiceType("Wheels change");
-        log.info("Is Service type has 'Wheels change'?:"+isHasServiceType);
-        String firstServiceType=truckcar1.getFirstServiceType();
-        log.info("The first Service Type is: "+firstServiceType);
-        List<String> sortedServiceTypes=truckcar1.getSortedServiceTypes();
-        for (String str:sortedServiceTypes) {
+        log.info("Count of ServiceTypes: " + serviceCount);
+        boolean isHasServiceType = truckcar1.hasServiceType("Wheels change");
+        log.info("Is Service type has 'Wheels change'?:" + isHasServiceType);
+        String firstServiceType = truckcar1.getFirstServiceType();
+        log.info("The first Service Type is: " + firstServiceType);
+        List<String> sortedServiceTypes = truckcar1.getSortedServiceTypes();
+        for (String str : sortedServiceTypes) {
             log.info(str);
         }
-        String oilWithLongestName=truckcar1.getOilWithLongestName();
-        log.info("Oil with longest name is:"+oilWithLongestName);
-        boolean isAllOilsContainKeyword=truckcar1.allOilsContainKeyword("mobil");
-        log.info("Is all oils contains 'mobil'?: "+isAllOilsContainKeyword);
+        String oilWithLongestName = truckcar1.getOilWithLongestName();
+        log.info("Oil with longest name is:" + oilWithLongestName);
+        boolean isAllOilsContainKeyword = truckcar1.allOilsContainKeyword("mobil");
+        log.info("Is all oils contains 'mobil'?: " + isAllOilsContainKeyword);
         truckcar1.removeOil("mobil");
-        System.out.println("List of oils without mobil:"+truckcar1.getOils());
+        System.out.println("List of oils without mobil:" + truckcar1.getOils());
         truckcar1.printColorCode();
         printInfo(truckcar2);
         cSTrucks.washCar();

@@ -220,6 +220,7 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
             curr = curr.next;
         }
     }
+
     //lamdba from Supplier functional interface
     @Override
     public String toString() {
