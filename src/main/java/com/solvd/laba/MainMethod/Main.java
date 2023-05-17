@@ -14,7 +14,6 @@ import com.solvd.laba.Employees.Mechanic;
 import com.solvd.laba.Interfaces.*;
 import com.solvd.laba.Licenses.LicenseLinkedList;
 import com.solvd.laba.LogRead;
-
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
