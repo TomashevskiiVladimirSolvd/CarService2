@@ -117,10 +117,11 @@ public class LicenseLinkedList<T> implements List<T>, IPrintInfo {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        for (Object obj : c)
-            if (contains(obj))
-                return remove(obj);
-        return false;
+        return c.stream()
+                .filter(this::contains)
+                .peek(this::remove)
+                .findFirst()
+                .isPresent();
     }
 
     //lambda from Consumer functional interface

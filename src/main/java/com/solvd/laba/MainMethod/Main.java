@@ -83,9 +83,7 @@ public class Main {
         String firstServiceType = truckcar1.getFirstServiceType();
         log.info("The first Service Type is: " + firstServiceType);
         List<String> sortedServiceTypes = truckcar1.getSortedServiceTypes();
-        for (String str : sortedServiceTypes) {
-            log.info(str);
-        }
+        sortedServiceTypes.stream().forEach(str -> log.info(str));
         String oilWithLongestName = truckcar1.getOilWithLongestName();
         log.info("Oil with longest name is:" + oilWithLongestName);
         boolean isAllOilsContainKeyword = truckcar1.allOilsContainKeyword("mobil");

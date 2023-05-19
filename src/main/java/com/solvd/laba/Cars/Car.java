@@ -5,6 +5,7 @@ import com.solvd.laba.Interfaces.IPrintInfo;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.apache.log4j.Logger;
 
@@ -121,11 +122,8 @@ public class Car implements IPrintInfo {
 
         try {
             System.out.println("Please choose a maintenance task from the following options:");
-            int i = 1;
-            for (String task : serviceType) {
-                System.out.println(i + ". " + task);
-                i++;
-            }
+            IntStream.range(0, serviceType.size())
+                    .forEach(i -> System.out.println((i + 1) + ". " + serviceType.toArray()[i]));
 
             int choice;
             do {
@@ -136,15 +134,12 @@ public class Car implements IPrintInfo {
                 }
             } while (choice < 1 || choice > serviceType.size());
 
-            String selectedTask = null;
-            i = 1;
-            for (String task : serviceType) {
-                if (i == choice) {
-                    selectedTask = task;
-                    break;
-                }
-                i++;
-            }
+            int finalChoice = choice;
+            String selectedTask = IntStream.range(0, serviceType.size())
+                    .filter(i -> i == finalChoice - 1)
+                    .mapToObj(i -> (String) serviceType.toArray()[i])
+                    .findFirst()
+                    .orElse(null);
 
             System.out.println("You have selected: " + selectedTask);
         } catch (Exception e) {
@@ -152,6 +147,8 @@ public class Car implements IPrintInfo {
             chooseServiceType();
         }
     }
+
+
 
     public List<String> getOils() {
         return oils;
