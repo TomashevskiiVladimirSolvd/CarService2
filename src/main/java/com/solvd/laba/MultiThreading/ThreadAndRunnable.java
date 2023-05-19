@@ -5,7 +5,7 @@ public class ThreadAndRunnable {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                System.out.println("Runnable is running " + Thread.currentThread().getName());
+                System.out.println("It's Running by using Runnable Interface: " + Thread.currentThread().getName());
             }
         };
         Thread thread1 = new Thread(runnable);
@@ -13,7 +13,7 @@ public class ThreadAndRunnable {
 
         Thread thread2 = new Thread() {
             public void run() {
-                System.out.println("Tread is running" + Thread.currentThread().getName());
+                System.out.println("It's Running by using Thread class: " + Thread.currentThread().getName());
             }
         };
         thread2.start();
