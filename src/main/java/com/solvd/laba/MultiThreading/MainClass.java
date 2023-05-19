@@ -43,7 +43,7 @@ public class MainClass {
             }
         });
 
-        executor.submit(new Runnable() {
+        executor.submit(new Thread() {
             @Override
             public void run() {
                 CompletableFuture<BufferedWriter> connectionFuture = connectionPool.getConnection();
@@ -58,6 +58,7 @@ public class MainClass {
                 }
             }
         });
+
 
         executor.shutdown();
     }
