@@ -16,7 +16,7 @@ public class MainClass {
                     CompletableFuture<BufferedWriter> connectionFuture = connectionPool.getConnection();
                     try {
                         BufferedWriter connection = connectionFuture.get();
-                        connection.write("This is a first line.");
+                        connection.write("This is First line of text");
                         connection.newLine();
                         connection.flush();
                         connectionPool.releaseConnection(connection);
