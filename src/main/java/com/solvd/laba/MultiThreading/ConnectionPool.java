@@ -18,11 +18,16 @@ public class ConnectionPool {
         // Lazy initialization
         for (int i = 0; i < 5; i++) {
             try {
-                connections.add(new BufferedWriter(new FileWriter("src/main/resources/write.txt", true)));
+                connections.add(createBufferedWriter("src/main/resources/write.txt", true));
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    private BufferedWriter createBufferedWriter(String filePath, boolean append) throws IOException {
+        FileWriter fileWriter = new FileWriter(filePath, append);
+        return new BufferedWriter(fileWriter);
     }
 
     public static ConnectionPool getInstance() {
@@ -61,6 +66,11 @@ public class ConnectionPool {
     }
 
     public void releaseConnection(BufferedWriter connection) {
+        try {
+            connection.close(); // Close the connection
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         connections.add(connection);
         semaphore.release();
     }
