@@ -67,11 +67,12 @@ public class ConnectionPool {
 
     public void releaseConnection(BufferedWriter connection) {
         try {
-            connection.close(); // Close the connection
+            connections.add(connection);
+            connection.close(); // Close the connection after adding it back to the queue
         } catch (IOException e) {
             e.printStackTrace();
         }
-        connections.add(connection);
         semaphore.release();
     }
+
 }
