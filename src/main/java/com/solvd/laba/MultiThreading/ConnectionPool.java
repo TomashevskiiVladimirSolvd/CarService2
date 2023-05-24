@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.*;
+import java.util.stream.IntStream;
 
 public class ConnectionPool {
     private BlockingQueue<BufferedWriter> connections;
@@ -16,13 +17,14 @@ public class ConnectionPool {
         semaphore = new Semaphore(5, true);
 
         // Lazy initialization
-        for (int i = 0; i < 5; i++) {
+        IntStream.range(0, 5).forEach(i -> {
             try {
                 connections.add(createBufferedWriter("src/main/resources/write.txt", true));
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+        });
+
     }
 
     private BufferedWriter createBufferedWriter(String filePath, boolean append) throws IOException {
