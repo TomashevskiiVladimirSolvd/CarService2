@@ -24,7 +24,6 @@ public class ConnectionPool {
                 e.printStackTrace();
             }
         });
-
     }
 
     private BufferedWriter createBufferedWriter(String filePath, boolean append) throws IOException {
@@ -69,12 +68,11 @@ public class ConnectionPool {
 
     public void releaseConnection(BufferedWriter connection) {
         try {
+            connection.close(); // Close the connection before adding it back to the queue
             connections.add(connection);
-            connection.close(); // Close the connection after adding it back to the queue
         } catch (IOException e) {
             e.printStackTrace();
         }
         semaphore.release();
     }
-
 }
